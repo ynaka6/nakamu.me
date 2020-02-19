@@ -7,3 +7,50 @@
 .font-leckerli-one {
     font-family: 'Leckerli One', cursive;
 }
+
+
+
+/* .contact-form__content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+} */
+
+/* .input {
+    background-color: #F0F0F0;
+    width: 75%;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.textarea {
+    background-color: #F0F0F0;
+    width: 75%;
+    border-radius: 30px;
+    
+} */
+
+/* .input:focus {
+    background-color: white;
+    border-radius: 30px;
+    border: 1px solid #D80C18;
+    box-shadow: 0px 0px 5px 0px #D80C18;
+}
+
+.textarea:focus {
+    background-color: white;
+    border: 1px solid #D80C18;
+    box-shadow: 0px 0px 5px 0px #D80C18;
+} */
+
+.input:placeholder-shown {
+    text-align: left;
+  }
+  
+.textarea:placeholder-shown {
+    text-align: left;
+  }
+
+.kome {
+    color: red;
+}

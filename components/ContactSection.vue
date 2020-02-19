@@ -1,77 +1,93 @@
 <template>
   <footer>
     <no-ssr>
-      <div class="all flex justify-center px-2">
+      <div id="wrapper" class="m-auto flex justify-center px-2">
+        
+        <!-- contact form desc -->
         <div
-          class="contact-form bg-light rounded-lg w-full p-4 mb-6 lg:py-8 lg:w-2/3"
+          class="contact-form border-primary-500 border-t-4  bg-light rounded-lg w-full p-4 mb-6 lg:py-8 lg:w-2/3"
         >
-        <div class="contact text-center">
-          <p class="contact-form__title__left text-right pr-10 text-dark text-lg lg:text-2xl mb-4 mr-0">
+        <div class="contact-form__title flex justify-center items-center w-full">
+        
+          <p class="contact-form__title__left sm:w-2/4 sm:border-r sm:inline-block sm:border-primary-500 sm:text-right sm:pr-10 text-dark text-lg lg:text-2xl mb-4 mr-0">
             Let's Play Together.
           </p>
 
-          <p class="contact-form__title__right text-left pl-10 text-dark text-lg lg:text-2xl mb-4">
-            <span class="contact-form__title__right__span">お仕事募集中。一緒にプログラミングしましょう。</span>
+          
+        
+          <p class="contact-form__title__right w-2/4 border-l border-primary-500 inline-block text-left pl-10 text-dark text-lg lg:text-2xl mb-4">
+            <span class="contact-form__title__right__span hidden text-sm sm:inline-block">お仕事募集中。一緒にプログラミングしましょう。</span>
           </p>
         </div>
 
+          <!-- form section -->
           <form
             autocomplete="off"
             name="contact"
             action="/contact/thanks"
             method="post"
           >
+                <!-- data-netlify="true" -->
+                <!-- data-netlify-honeypot="bot-field" -->
 
-            <!-- data-netlify="true" -->
-            <!-- data-netlify-honeypot="bot-field" -->
             <input type="hidden" name="form-name" value="contact" />
+
+            <!-- name section -->
             <div class="flex flex-col lg:flex-row">
               <div class="lg:flex-1 px-1 mb-2">
-                 <p class="name-label text-center mt-6">お名前<span class="kome">*</span></p>
+                 <p class="label text-center mt-6">お名前<span class="kome">*</span></p>
               </div>
             </div>
+
             <div class="flex flex-col lg:flex-row">
-              <div class="contact-form__name lg:flex-1 px-1 mb-2">
+              <div class="contact-form__content lg:flex-1 px-1 mb-2">
                 <input
                   type="text"
                   name="name"
-                  class="name-input rounded-lg p-4 border text-gray-800"
+                  class="input rounded-lg p-4 border text-gray-800"
                   placeholder="山田 太郎"
                 />
               </div>
             </div>
+
+            <!-- mail section -->
             <div class="flex flex-col lg:flex-row">
               <div class="lg:flex-1 px-1 mb-2">
-                 <p class="name-label text-center mt-3">メールアドレス<span class="kome">*</span></p>
+                 <p class="label text-center mt-3">メールアドレス<span class="kome">*</span></p>
               </div>
             </div>
+
             <div class="flex flex-col lg:flex-row">
-              <div class="contact-form__name lg:flex-1 px-1 mb-2">
+              <div class="contact-form__content lg:flex-1 px-1 mb-2">
                 <input
                   type="email"
                   name="email"
-                  class="name-input rounded-lg p-4 border text-gray-800"
+                  class="input rounded-lg p-4 border text-gray-800"
                   placeholder="your@example.com"
                 />
               </div>
             </div>
+
+            <!-- query section -->
             <div class="flex flex-col lg:flex-row">
               <div class="lg:flex-1 px-1 mb-2">
-                 <p class="name-label text-center mt-3">お問い合わせ内容<span class="kome">*</span></p>
+                 <p class="label text-center mt-3">お問い合わせ内容<span class="kome">*</span></p>
               </div>
             </div>
-            <div class="contact-form__name px-1 mb-2">
+
+            <div class="contact-form__content px-1 mb-2">
               <textarea
                 name="content"
-                class="textarea-input rounded-lg p-4 border text-gray-800"
+                class="textarea resize-none border-primary-500 bg-gray-100 w-9/12 rounded-full rounded-lg p-4 border text-gray-800"
                 col="4"
                 row="10"
                 placeholder=""
               />
             </div>
-            <div class="contact-form__name flex justify-center items-center px-1">
+
+            <div class="contact-form__content flex justify-center items-center px-1">
               <button
-                class="py-5 px-2 rounded-lg mt-6 text-white font-bold uppercase lg:px-4"
+                class="bg-primary-500 w-2/5 py-5 px-2 rounded-full rounded-lg mt-10 text-white font-bold uppercase lg:px-4"
               >
                 <i class="fas fa-envelope mr-3"></i>お問い合わせ
               </button>
@@ -107,71 +123,73 @@ export default createComponent({
 </script>
 
 <style scoped>
-@media screen (max-width: 1040px;) {
-        .contact-form__title__right {
-            font-size: 10px;
-        }
-    }
+.contact-form__title__center {
+    margin: 0 auto;
+}
+#wrapper {
+  animation: 1.5s appear;
+}
 
-.contact {
+
+/* .contact-form {
+  border-top: 5px solid #D80C18; 
+} */
+
+/* .contact-form > p {
+    font-weight: bold;
+} */
+
+/* .contact-form__title {
      display: flex;
      justify-content: center;
      align-items: center;
      width: 100%;
- }
-.contact-form {
-  border-top: 5px solid #D80C18; 
-}
+ } */
 
-.contact-form > p {
-    font-weight: bold;
-}
-
-.contact-form__title__left {
+/* .contact-form__title__left {
     width: 50%;
     border-right: 1.5px solid #D80C18;
     display: inline-block;
-}
+} */
 
-.contact-form__title__right {
+/* .contact-form__title__right {
     width: 50%;
     border-left: 1.5px solid #D80C18;
     display: inline-block;
 
-}
+} */
 
-.contact-form__title__right__span {
-     vertical-align: center;
+/* .contact-form__title__right__span {
      font-size: 15px;
-}
+} */
 
-.contact-form__name {
+/* .contact-form__content {
     width: 100%;
     display: flex;
     justify-content: center;
-}
-
-.name-label {
+} */
+/* 
+.label {
     width: 100%;
     display: block;
     font-weight: bold;
-}
-
-.name-input {
+} */
+/* 
+input {
     background-color: #F0F0F0;
     width: 75%;
     border-radius: 30px;
     text-align: center;
-}
+} */
 
-.textarea-input {
+/* .textarea {
     background-color: #F0F0F0;
     width: 75%;
     border-radius: 30px;
     
 }
 
-input:focus {
+.input:focus {
     background-color: white;
     border-radius: 30px;
     border: 1px solid #D80C18;
@@ -182,40 +200,49 @@ textarea:focus {
     background-color: white;
     border: 1px solid #D80C18;
     box-shadow: 0px 0px 5px 0px #D80C18;
-}
+} */
 
-textarea {
-    resize: none;
+:focus {
+    box-shadow: 0px 0px 5px 0px #D80C18;
+    @apply bg-white rounded-full border border-primary-500;
 }
 
 ::placeholder {
-  text-align: center;
+    @apply text-center;
 }
-input:placeholder-shown {
+
+button:hover  {
+    box-shadow: 0px 0px 5px 0px #D80C18;
+    @apply bg-white border-primary-500 text-primary-500;
+}
+
+/* input:placeholder-shown {
   text-align: left;
 }
 
 textarea:placeholder-shown {
   text-align: left;
-}
+} */
 
 
 .kome {
-    color: red;
+    @apply text-primary-500;
 }
 
-button {
-    background-color: #D80C18;
-    width: 40%;
+
+
+.contact-form__content {
+    @apply flex w-full justify-center;
 }
 
-button:hover {
-    opacity: 0.75;
-    background-color: white;
-    border: 1px solid #D80C18;
-    box-shadow: 0px 0px 5px 0px #D80C18;
-    color: #D80C18;
+.label {
+    @apply block w-full font-bold;
 }
+
+input {
+    @apply border-primary-500 bg-gray-100 w-9/12 rounded-full;
+}
+
 ul.list-menu {
   @apply inline-flex flex-wrap justify-center list-none leading-tight;
 }
@@ -229,11 +256,6 @@ ul.list-menu > li:not(:last-child)::after {
 
 *:focus {
 outline: none;
-}
-
-.all {
-  animation: 1.5s appear;
-  margin: auto;
 }
 
 @keyframes appear {
