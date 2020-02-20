@@ -9,14 +9,17 @@
         >
         <div class="contact-form__title flex justify-center items-center w-full">
         
-          <p class="contact-form__title__left sm:w-2/4 sm:border-r sm:inline-block sm:border-primary-500 sm:text-right sm:pr-10 text-dark text-lg lg:text-2xl mb-4 mr-0">
+          <p class="contact-form__title__left hidden sm:w-2/4 sm:border-r sm:inline-block sm:border-primary-500 sm:text-right sm:pr-10 text-dark text-lg lg:text-2xl mb-4 mr-0">
             Let's Play Together.
           </p>
-
           
+          <!-- MOBILE -->
+          <p class="contact-form__title__left sm:hidden pb-1 w-1/2 border-b inline-block border-primary-500  text-center text-dark text-lg lg:text-2xl mb-4 mr-0">
+            Let's Play Together.
+          </p>
         
-          <p class="contact-form__title__right w-2/4 border-l border-primary-500 inline-block text-left pl-10 text-dark text-lg lg:text-2xl mb-4">
-            <span class="contact-form__title__right__span hidden text-sm sm:inline-block">お仕事募集中。一緒にプログラミングしましょう。</span>
+          <p class="contact-form__title__right  hidden sm:inline-block w-2/4 border-l border-primary-500 inline-block text-left pl-10 text-dark text-lg lg:text-2xl mb-4">
+            <span class="contact-form__title__right__span  text-sm">お仕事募集中。一緒にプログラミングしましょう。</span>
           </p>
         </div>
 
