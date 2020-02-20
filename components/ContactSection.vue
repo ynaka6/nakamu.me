@@ -92,7 +92,7 @@
               <button
                 class="bg-primary-500 w-2/5 py-5 px-2 rounded-full rounded-lg mt-10 text-white font-bold uppercase lg:px-4"
               >
-                <i class="fas fa-envelope mr-3"></i>お問い合わせ
+                <i class="hidden sm:inline-block fas fa-envelope mr-3"></i>お問い合わせ
               </button>
             </div>
 
