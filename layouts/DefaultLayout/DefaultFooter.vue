@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <contact-section />
+    <n-contact-section />
     <div class="bg-dark text-gray-100 px-2 pt-0 pb-2 mt-0">
       <div class="container mx-auto py-8">
         <div class="flex justify-center text-xs">
@@ -44,11 +44,11 @@
 </template>
 
 <script>
-import ContactSection from '~/components/ContactSection.vue'
+import NContactSection from '~/components/NContactSection.vue'
 
 export default {
   components: {
-    ContactSection
+    NContactSection
   }
 }
 </script>

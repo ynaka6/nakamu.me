@@ -25,8 +25,9 @@
             <p
               class="contact-form__title__right hidden sm:inline-block w-2/4 border-l border-primary-500 inline-block text-left pl-10 text-dark text-lg lg:text-2xl mb-4"
             >
-              <span
-class="contact-form__title__right__span text-sm">お仕事募集中。一緒にプログラミングしましょう。</span>
+              <span class="contact-form__title__right__span text-sm">
+                お仕事募集中。一緒にプログラミングしましょう。
+              </span>
             </p>
           </div>
 
@@ -40,7 +41,7 @@ class="contact-form__title__right__span text-sm">お仕事募集中。一緒に�
             <!-- data-netlify="true" -->
             <!-- data-netlify-honeypot="bot-field" -->
 
-            <input type="hidden" name="form-name" value="contact" >
+            <input type="hidden" name="form-name" value="contact" />
 
             <!-- name section -->
             <div class="flex flex-col lg:flex-row">
@@ -58,7 +59,7 @@ class="contact-form__title__right__span text-sm">お仕事募集中。一緒に�
                   name="name"
                   class="input rounded-lg p-4 border text-gray-800"
                   placeholder="山田 太郎"
-                >
+                />
               </div>
             </div>
 
@@ -78,7 +79,7 @@ class="contact-form__title__right__span text-sm">お仕事募集中。一緒に�
                   name="email"
                   class="input rounded-lg p-4 border text-gray-800"
                   placeholder="your@example.com"
-                >
+                />
               </div>
             </div>
 

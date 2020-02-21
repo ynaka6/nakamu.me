@@ -9,6 +9,7 @@ module.exports = {
   },
   extends: [
     '@nuxtjs',
+    'eslint:recommended',
     'prettier',
     'prettier/vue',
     'plugin:prettier/recommended',
@@ -20,6 +21,12 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
-    'space-before-function-paren': 0
+    'space-before-function-paren': 0,
+    'prettier/prettier': ['error', { 'space-before-function-paren': false }],
+    'vue/html-self-closing': ['error', {
+        'html': {
+            'void': 'always',
+        }
+    }]
   }
 }
