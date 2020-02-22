@@ -72,7 +72,7 @@
 
 <script lang="ts">
 import { createComponent } from '@vue/composition-api'
-import NCircleButton from '@/elements/NCircleButton'
+import NCircleButton from '~/elements/NCircleButton.vue'
 import NContactSection from '~/components/NContactSection.vue'
 export default createComponent({
   components: {
