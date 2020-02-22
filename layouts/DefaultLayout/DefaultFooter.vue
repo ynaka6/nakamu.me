@@ -1,5 +1,6 @@
 <template>
   <footer>
+    <n-contact-section />
     <div class="bg-dark text-gray-100 px-2 pt-0 pb-2 mt-0">
       <div class="container mx-auto py-8">
         <div class="flex justify-center text-xs">
@@ -72,9 +73,11 @@
 <script lang="ts">
 import { createComponent } from '@vue/composition-api'
 import NCircleButton from '@/elements/NCircleButton'
+import NContactSection from '~/components/NContactSection.vue'
 export default createComponent({
   components: {
-    NCircleButton
+    NCircleButton,
+    NContactSection
   }
 })
 </script>

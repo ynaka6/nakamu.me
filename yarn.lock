@@ -1661,6 +1661,7 @@
 "@vue/composition-api@^0.3.4":
   version "0.3.4"
   resolved "https://registry.yarnpkg.com/@vue/composition-api/-/composition-api-0.3.4.tgz#43d2c3377173cfe1d02e51e3342bcf0fbde9c4b6"
+  integrity sha512-aMbg/pEk0PSQAIFyWWLqbAmaCCTx1kFq+49KZslIBJH9Wqos7eEPLtMv4gGxd/EcciBIgfbtUXaXGg/O3mheRA==
   dependencies:
     tslib "^1.9.3"
 
@@ -3651,6 +3652,7 @@ eslint-ast-utils@^1.1.0:
 eslint-config-prettier@^6.10.0:
   version "6.10.0"
   resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-6.10.0.tgz#7b15e303bf9c956875c948f6b21500e48ded6a7f"
+  integrity sha512-AtndijGte1rPILInUdHjvKEGbIV06NuvPrqlIEaEaWtbtvJh464mDeyGMdZEQMsGvC0ZVkiex1fSNcC4HAbRGg==
   dependencies:
     get-stdin "^6.0.0"
 
@@ -3733,6 +3735,7 @@ eslint-plugin-nuxt@>=0.4.2:
 eslint-plugin-prettier@^3.1.2:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/eslint-plugin-prettier/-/eslint-plugin-prettier-3.1.2.tgz#432e5a667666ab84ce72f945c72f77d996a5c9ba"
+  integrity sha512-GlolCC9y3XZfv3RQfwGew7NnuFDKsfI4lbvRK+PIIo23SFH+LemGs4cKwzAaRa+Mdb+lQO/STaIayno8T5sJJA==
   dependencies:
     prettier-linter-helpers "^1.0.0"
 

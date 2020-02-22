@@ -14,7 +14,13 @@ export default {
         content: process.env.npm_package_description || ''
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        href: 'https://use.fontawesome.com/releases/v5.6.1/css/all.css'
+      }
+    ]
   },
   /*
    ** Customize the progress-bar color
@@ -67,6 +73,16 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    // extend(config, ctx) {}
+    extend(config, ctx) {
+      // Run ESLint on save
+      if (ctx.isDev && ctx.isClient) {
+        config.module.rules.push({
+          enforce: 'pre',
+          test: /\.(js|vue)$/,
+          loader: 'eslint-loader',
+          exclude: /(node_modules)/
+        })
+      }
+    }
   }
 }
