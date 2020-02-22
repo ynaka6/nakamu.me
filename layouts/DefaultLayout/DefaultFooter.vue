@@ -36,6 +36,33 @@
           </ul>
         </div>
         <div class="mt-4 flex justify-center text-xs">
+          <n-circle-button
+            href="https://twitter.com/nakanakamu0828"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mr-2"
+          >
+            <font-awesome-icon :icon="['fab', 'twitter']" size="lg" />
+          </n-circle-button>
+          <n-circle-button
+            href="https://github.com/nakanakamu0828"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Twitter"
+            class="mr-2"
+          >
+            <font-awesome-icon :icon="['fab', 'github']" size="lg" />
+          </n-circle-button>
+          <n-circle-button
+            href="mailto:yuuki.nakamura.0828@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Twitter"
+          >
+            <font-awesome-icon :icon="['fas', 'envelope']" size="lg" />
+          </n-circle-button>
+        </div>
+        <div class="mt-4 flex justify-center text-xs">
           @nakamu.life
         </div>
       </div>
@@ -43,25 +70,27 @@
   </footer>
 </template>
 
-<script>
+<script lang="ts">
+import { createComponent } from '@vue/composition-api'
+import NCircleButton from '@/elements/NCircleButton'
 import NContactSection from '~/components/NContactSection.vue'
-
-export default {
+export default createComponent({
   components: {
+    NCircleButton,
     NContactSection
   }
-}
+})
 </script>
 
 <style scoped>
 ul.list-menu {
-  @apply inline-flex flex-wrap justify-center list-none leading-tight;
+  @apply .inline-flex .flex-wrap .justify-center .list-none .leading-tight;
 }
 ul.list-menu > li {
-  @apply mb-1;
+  @apply .mb-1;
 }
 ul.list-menu > li:not(:last-child)::after {
   content: '/';
-  @apply px-2;
+  @apply .px-2;
 }
 </style>
