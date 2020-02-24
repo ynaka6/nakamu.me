@@ -2,7 +2,7 @@
   <header class="header">
     <nav class="nav">
       <div class="container">
-        <div class="flex items-center">
+        <div class="flex items-center justify-between">
           <nuxt-link to="/" class="text-white p-3 hover:bg-primary-600">
             <h1 class="text-3xl font-leckerli-one">
               Nakamu
@@ -11,24 +11,33 @@
               世界を旅して暮らしたい放浪エンジニア
             </p>
           </nuxt-link>
+          <div class="hidden lg:block text-white">
+            <ul class="flex font-quicksand">
+              <li v-for="(menu, index) in menuList" :key="index">
+                <a :v-else="menu.to" class="mr-4 hover:opacity-75">
+                  {{ menu.text }}
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div />
       </div>
     </nav>
   </header>
 </template>
 
 <script lang="ts">
-import { createComponent } from '@vue/composition-api'
+import { defineComponent } from '@vue/composition-api'
+import menuList from '@/assets/json/menuList.json'
 
 interface Data {
-  title: string
+  menuList: Array<any>
 }
 
-export default createComponent({
+export default defineComponent({
   setup(): Data {
     return {
-      title: 'mentor'
+      menuList
     }
   }
 })

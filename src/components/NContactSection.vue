@@ -119,11 +119,11 @@
 </template>
 
 <script lang="ts">
-import { createComponent } from '@vue/composition-api'
+import { defineComponent } from '@vue/composition-api'
 // reactive is disable
 // watch is disable
 
-export default createComponent({
+export default defineComponent({
   //   setup(props, context) {
   //     const state = reactive<{ needContactForm: boolean }>({
   //       needContactForm: !context.root.$route.path.includes('contact')

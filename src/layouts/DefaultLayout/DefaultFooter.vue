@@ -40,7 +40,7 @@
             href="https://twitter.com/nakanakamu0828"
             target="_blank"
             rel="noopener noreferrer"
-            class="mr-2"
+            class="bg-white hover:bg-gray-400 text-gray-800 mr-2"
           >
             <font-awesome-icon :icon="['fab', 'twitter']" size="lg" />
           </n-circle-button>
@@ -49,7 +49,7 @@
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Twitter"
-            class="mr-2"
+            class="bg-white hover:bg-gray-400 text-gray-800 mr-2"
           >
             <font-awesome-icon :icon="['fab', 'github']" size="lg" />
           </n-circle-button>
@@ -58,6 +58,7 @@
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Twitter"
+            class="bg-white hover:bg-gray-400 text-gray-800"
           >
             <font-awesome-icon :icon="['fas', 'envelope']" size="lg" />
           </n-circle-button>
@@ -71,13 +72,23 @@
 </template>
 
 <script lang="ts">
-import { createComponent } from '@vue/composition-api'
+import { defineComponent } from '@vue/composition-api'
 import NCircleButton from '~/elements/NCircleButton.vue'
 import NContactSection from '~/components/NContactSection.vue'
-export default createComponent({
+
+interface Data {
+  drawer: Boolean
+}
+
+export default defineComponent({
   components: {
     NCircleButton,
     NContactSection
+  },
+  setup(): Data {
+    return {
+      drawer: false
+    }
   }
 })
 </script>

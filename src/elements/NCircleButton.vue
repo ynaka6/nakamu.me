@@ -4,16 +4,16 @@
     :href="href"
     :target="target"
     :rel="rel"
-    class="inline-flex bg-white hover:bg-gray-400 text-gray-800 w-10 h-10 mr-2 rounded-full font-semibold flex items-center justify-center font-hairline no-underline"
+    class="inline-flex w-10 h-10 mr-2 rounded-full font-semibold flex items-center justify-center font-hairline no-underline"
   >
     <slot />
   </component>
 </template>
 
 <script lang="ts">
-import { createComponent } from '@vue/composition-api'
+import { defineComponent } from '@vue/composition-api'
 
-export default createComponent({
+export default defineComponent({
   props: {
     tagName: {
       type: String,
