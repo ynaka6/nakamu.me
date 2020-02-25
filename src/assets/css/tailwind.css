@@ -4,6 +4,7 @@
 
 @import url("https://fonts.googleapis.com/css?family=Leckerli+One");
 @import url("https://fonts.googleapis.com/css?family=Quicksand");
+@import url("@fortawesome/fontawesome-svg-core/styles.css");
 
 .font-leckerli-one {
     font-family: 'Leckerli One', cursive;
