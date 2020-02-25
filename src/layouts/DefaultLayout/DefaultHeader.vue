@@ -3,20 +3,21 @@
     <nav class="nav">
       <div class="container">
         <div class="flex items-center justify-between">
-          <nuxt-link to="/" class="text-white p-3 hover:bg-primary-600">
-            <h1 class="text-3xl font-leckerli-one">
+          <nuxt-link to="/" class="text-primary-500 p-3 hover:opacity-75">
+            <h1 class="text-2xl font-leckerli-one">
+              <font-awesome-icon :icon="['fas', 'fire']" />
               Nakamu
             </h1>
             <p class="text-xs">
               世界を旅して暮らしたい放浪エンジニア
             </p>
           </nuxt-link>
-          <div class="hidden lg:block text-white">
+          <div class="hidden lg:block text-primary-500">
             <ul class="flex font-quicksand">
               <li v-for="(menu, index) in menuList" :key="index">
-                <a :v-else="menu.to" class="mr-4 hover:opacity-75">
+                <nuxt-link :to="menu.to" class="mr-4 hover:opacity-75">
                   {{ menu.text }}
-                </a>
+                </nuxt-link>
               </li>
             </ul>
           </div>
@@ -48,7 +49,7 @@ export default defineComponent({
   @apply fixed w-full z-10 top-0 shadow;
 }
 .nav {
-  @apply w-full fixed items-center justify-between flex-wrap shadow-lg px-6 bg-primary-500;
+  @apply w-full fixed items-center justify-between flex-wrap px-6 bg-white;
 }
 .container {
   @apply mx-auto;

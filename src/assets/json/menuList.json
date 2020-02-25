@@ -1,8 +1,7 @@
 [
-    { "to": "#", "text": "Introduction" },
+    { "to": "/", "text": "About" },
     { "to": "#", "text": "Skills" },
     { "to": "#", "text": "Works" },
-    { "to": "#", "text": "Socials" },
     { "to": "#", "text": "Contents" },
-    { "to": "#", "text": "Contact" }
+    { "to": "/contact", "text": "Contact" }
 ]
