@@ -120,21 +120,39 @@
   </client-only>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      name: '',
-      email: '',
-      password: '',
-      content: ''
-    }
-  },
+<script lang="ts">
+import { defineComponent } from '@vue/composition-api'
+// reactive is disable
+// watch is disable
 
-  methods: {
-    login() {}
+export default defineComponent({
+  setup() {
+    const name: string = ''
+    const email: string = ''
+    const content: string = ''
+
+    return {
+      name,
+      email,
+      content
+    }
   }
-}
+})
+
+// default scripts
+
+// setup(props,context){
+//     needContactForm:!context.root.$route.path.includes('contact')
+// })
+// watch(()=>{
+// state.needContactForm=!context.root.$route.path.includes('contact')
+// })
+// /*eslint-disable*/
+// console.log(props)
+// return{
+// state
+// }
+// }
 </script>
 
 <style scoped>
