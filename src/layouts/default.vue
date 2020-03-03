@@ -13,17 +13,18 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-
+import { defineComponent } from '@vue/composition-api'
 import DefaultHeader from './DefaultLayout/DefaultHeader.vue'
 import DefaultFooter from './DefaultLayout/DefaultFooter.vue'
+import provideBreadcrumbs from '@/store/modules/breadcrumbs'
 
-export default Vue.extend({
+export default defineComponent({
   components: {
     DefaultHeader,
     DefaultFooter
   },
-  data() {
+  setup() {
+    provideBreadcrumbs()
     return {
       title: 'title'
     }

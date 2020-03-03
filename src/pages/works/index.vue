@@ -1,13 +1,20 @@
 <template>
-  <div class="container">
-    works
-  </div>
+  <works-container />
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import { MetaInfo } from 'vue-meta'
 
 export default Vue.extend({
-  name: 'Works'
+  name: 'Works',
+  components: {
+    worksContainer: () => import('@/containers/worksContainer.vue')
+  },
+  head(): MetaInfo {
+    return {
+      title: 'Skill - nakamu.life'
+    }
+  }
 })
 </script>

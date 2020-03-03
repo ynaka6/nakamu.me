@@ -1,5 +1,9 @@
 <template>
   <footer>
+    <n-breadcrumb
+      v-if="breadcrumbs && breadcrumbs.length > 0"
+      :breadcrumbs="breadcrumbs"
+    />
     <div class="bg-dark text-gray-100 px-2 py-3">
       <div class="container mx-auto">
         <div class="flex justify-center text-xs">
@@ -49,15 +53,17 @@
 
 <script lang="ts">
 import { defineComponent } from '@vue/composition-api'
-
-interface Data {
-  drawer: Boolean
-}
+import NBreadcrumb from '@/components/NBreadcrumb.vue'
+import { useBreadcrumbs } from '@/store/modules/breadcrumbs'
 
 export default defineComponent({
-  setup(): Data {
+  components: {
+    NBreadcrumb
+  },
+  setup() {
     return {
-      drawer: false
+      drawer: false,
+      breadcrumbs: useBreadcrumbs()
     }
   }
 })

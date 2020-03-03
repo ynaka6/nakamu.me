@@ -1,17 +1,20 @@
 <template>
-  <div class="container">
-    <n-contact-section />
-  </div>
+  <contact-container />
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import NContactSection from '~/components/NContactSection.vue'
+import { MetaInfo } from 'vue-meta'
 
 export default Vue.extend({
   name: 'Contact',
   components: {
-    NContactSection
+    contactContainer: () => import('@/containers/contactContainer.vue')
+  },
+  head(): MetaInfo {
+    return {
+      title: 'Contact - nakamu.life'
+    }
   }
 })
 </script>
