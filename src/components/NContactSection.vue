@@ -29,14 +29,13 @@
         </div>
 
         <!-- form section -->
-        <validation-observer v-slot="{ handleSubmit, invalid }">
+        <validation-observer v-slot="{ invalid }">
           <form
             autocomplete="off"
             name="contact"
             action="/contact/thanks"
             method="post"
             class="max-w-2/3"
-            @submit.prevent="handleSubmit(login)"
           >
             <!-- data-netlify="true" -->
             <!-- data-netlify-honeypot="bot-field" -->
@@ -104,9 +103,10 @@
             <validation-provider>
               <div class="px-1 mb-2 text-center">
                 <button
-                  type="button"
+                  type="submit"
+                  :class="{ buttonActive: invalid }"
+                  class="sendButton mx-auto w-full py-5 px-2 rounded-full rounded-lg mt-10 text-white bg-primary-500 font-bold uppercase lg:px-4 md:w-2/5"
                   :disabled="invalid"
-                  class="mx-auto bg-primary-500 w-full py-5 px-2 rounded-full rounded-lg mt-10 text-white font-bold uppercase lg:px-4 md:w-2/5"
                 >
                   <font-awesome-icon :icon="['fas', 'envelope']" class="mr-2" />
                   お問い合わせ
@@ -127,6 +127,7 @@ import { defineComponent } from '@vue/composition-api'
 
 export default defineComponent({
   setup() {
+    // const isActive: boolean = true
     const name: string = ''
     const email: string = ''
     const content: string = ''
@@ -180,6 +181,10 @@ button:hover {
 
 *:focus {
   @apply outline-none;
+}
+
+.buttonActive {
+  @apply mx-auto w-full py-5 px-2 rounded-full rounded-lg mt-10 text-white bg-primary-300 font-bold uppercase;
 }
 
 @keyframes appear {
