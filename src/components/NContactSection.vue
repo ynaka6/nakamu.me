@@ -105,7 +105,7 @@
                 <button
                   type="submit"
                   :class="{ buttonActive: invalid }"
-                  class="sendButton mx-auto w-full py-5 px-2 rounded-full rounded-lg mt-10 text-white bg-primary-500 font-bold uppercase lg:px-4 md:w-2/5"
+                  class="mx-auto w-full py-5 px-2 rounded-full mt-10 text-white bg-primary-500 font-bold uppercase lg:px-4 md:w-2/5"
                   :disabled="invalid"
                 >
                   <font-awesome-icon :icon="['fas', 'envelope']" class="mr-2" />
@@ -170,11 +170,6 @@ export default defineComponent({
   @apply text-center;
 }
 
-button:hover {
-  box-shadow: 0px 0px 5px 0px theme('colors.red.500');
-  @apply bg-white border-primary-500 text-primary-500;
-}
-
 .must {
   @apply text-primary-500;
 }
@@ -184,7 +179,24 @@ button:hover {
 }
 
 .buttonActive {
-  @apply mx-auto w-full py-5 px-2 rounded-full rounded-lg mt-10 text-white bg-primary-300 font-bold uppercase;
+  @apply mx-auto w-full py-5 px-2 rounded-full mt-10 text-white bg-primary-300 font-bold uppercase;
+}
+
+@screen md {
+    .buttonActive {
+        @apply w-2/5
+    }
+}
+
+@screen lg {
+    .buttonActive {
+        @apply px-4
+    }
+}
+
+.buttonActive:hover {
+  box-shadow: 0px 0px 5px 0px theme('colors.red.500');
+  @apply bg-white rounded-full border-primary-500 text-primary-500;
 }
 
 @keyframes appear {
