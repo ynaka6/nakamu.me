@@ -29,68 +29,92 @@
         </div>
 
         <!-- form section -->
-        <form
-          autocomplete="off"
-          name="contact"
-          action="/contact/thanks"
-          method="post"
-          class="max-w-2/3"
-        >
-          <!-- data-netlify="true" -->
-          <!-- data-netlify-honeypot="bot-field" -->
+        <validation-observer v-slot="{ invalid }">
+          <form
+            autocomplete="off"
+            name="contact"
+            action="/contact/thanks"
+            method="post"
+            class="max-w-2/3"
+          >
+            <!-- data-netlify="true" -->
+            <!-- data-netlify-honeypot="bot-field" -->
 
-          <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="form-name" value="contact" />
 
-          <!-- name section -->
-          <div class="px-1 mb-2 text-center">
-            <label for="name" class="block mt-6 mb-2 font-semibold">
-              お名前<span class="ml-2 must">*</span>
-            </label>
-            <input
-              id="name"
-              type="text"
-              name="name"
-              class="w-full border-primary-500 bg-gray-100 rounded-full p-4 border text-gray-800 md:w-9/12"
-              placeholder="山田 太郎"
-            />
-          </div>
+            <!-- name section -->
+            <div class="px-1 mb-2 text-center">
+              <label for="name" class="block mt-6 mb-2 font-semibold">
+                お名前<span class="ml-2 must">*</span>
+              </label>
+              <validation-provider v-slot="{ errors }" rules="required|max:50">
+                <input
+                  id="name"
+                  v-model="name"
+                  type="text"
+                  name="お名前"
+                  class="w-full border-primary-500 bg-gray-100 rounded-full p-4 border text-gray-800 md:w-9/12"
+                  placeholder="山田 太郎"
+                />
+                <span class="block mt-2 text-red-700 font-bold">
+                  {{ errors[0] }}
+                </span>
+              </validation-provider>
+            </div>
 
-          <div class="px-1 mb-2 text-center">
-            <label for="email" class="block mt-6 mb-2 font-semibold">
-              メールアドレス<span class="ml-2 must">*</span>
-            </label>
-            <input
-              id="email"
-              type="email"
-              name="email"
-              class="w-full border-primary-500 bg-gray-100 rounded-full p-4 border text-gray-800 md:w-9/12"
-              placeholder="yamada@example.com"
-            />
-          </div>
+            <div class="px-1 mb-2 text-center">
+              <label for="email" class="block mt-6 mb-2 font-semibold">
+                メールアドレス<span class="ml-2 must">*</span>
+              </label>
+              <validation-provider v-slot="{ errors }" rules="required|max:255">
+                <input
+                  id="email"
+                  v-model="email"
+                  type="email"
+                  name="メールアドレス"
+                  class="w-full border-primary-500 bg-gray-100 rounded-full p-4 border text-gray-800 md:w-9/12"
+                  placeholder="yamada@example.com"
+                />
+                <span class="block mt-2 text-red-700 font-bold">
+                  {{ errors[0] }}
+                </span>
+              </validation-provider>
+            </div>
 
-          <div class="px-1 mb-2 text-center">
-            <label for="content" class="block mt-6 mb-2 font-semibold">
-              お問い合わせ内容<span class="ml-2 must">*</span>
-            </label>
-            <textarea
-              id="content"
-              name="content"
-              class="w-full border-primary-500 bg-gray-100 rounded-full rounded-lg p-4 border text-gray-800 md:w-9/12"
-              col="4"
-              row="10"
-              placeholder=""
-            />
-          </div>
-
-          <div class="px-1 mb-2 text-center">
-            <button
-              class="mx-auto bg-primary-500 w-full py-5 px-2 rounded-full rounded-lg mt-10 text-white font-bold uppercase lg:px-4 md:w-2/5"
-            >
-              <font-awesome-icon :icon="['fas', 'envelope']" class="mr-2" />
-              お問い合わせ
-            </button>
-          </div>
-        </form>
+            <div class="px-1 mb-2 text-center">
+              <label for="content" class="block mt-6 mb-2 font-semibold">
+                お問い合わせ内容<span class="ml-2 must">*</span>
+              </label>
+              <validation-provider v-slot="{ errors }" rules="required">
+                <textarea
+                  id="content"
+                  v-model="content"
+                  name="お問い合わせ内容"
+                  class="w-full border-primary-500 bg-gray-100 rounded-full rounded-lg p-4 border text-gray-800 md:w-9/12"
+                  col="4"
+                  row="10"
+                  placeholder=""
+                />
+                <span class="block mt-1 text-red-700 font-bold">
+                  {{ errors[0] }}
+                </span>
+              </validation-provider>
+            </div>
+            <validation-provider>
+              <div class="px-1 mb-2 text-center">
+                <button
+                  type="submit"
+                  :class="{ buttonActive: invalid }"
+                  class="sendButton mx-auto w-full py-5 px-2 rounded-full rounded-lg mt-10 text-white bg-primary-500 font-bold uppercase lg:px-4 md:w-2/5"
+                  :disabled="invalid"
+                >
+                  <font-awesome-icon :icon="['fas', 'envelope']" class="mr-2" />
+                  お問い合わせ
+                </button>
+              </div>
+            </validation-provider>
+          </form>
+        </validation-observer>
       </div>
     </div>
   </client-only>
@@ -102,20 +126,34 @@ import { defineComponent } from '@vue/composition-api'
 // watch is disable
 
 export default defineComponent({
-  //   setup(props, context) {
-  //     const state = reactive<{ needContactForm: boolean }>({
-  //       needContactForm: !context.root.$route.path.includes('contact')
-  //     })
-  //     watch(() => {
-  //       state.needContactForm = !context.root.$route.path.includes('contact')
-  //     })
-  //     /* eslint-disable */
-  //     console.log(props)
-  //     return {
-  //       state
-  //     }
-  //   }
+  setup() {
+    // const isActive: boolean = true
+    const name: string = ''
+    const email: string = ''
+    const content: string = ''
+
+    return {
+      name,
+      email,
+      content
+    }
+  }
 })
+
+// default scripts
+
+// setup(props,context){
+//     needContactForm:!context.root.$route.path.includes('contact')
+// })
+// watch(()=>{
+// state.needContactForm=!context.root.$route.path.includes('contact')
+// })
+// /*eslint-disable*/
+// console.log(props)
+// return{
+// state
+// }
+// }
 </script>
 
 <style scoped>
@@ -143,6 +181,10 @@ button:hover {
 
 *:focus {
   @apply outline-none;
+}
+
+.buttonActive {
+  @apply mx-auto w-full py-5 px-2 rounded-full rounded-lg mt-10 text-white bg-primary-300 font-bold uppercase;
 }
 
 @keyframes appear {

@@ -30,7 +30,11 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/composition-api.js', '~/plugins/fontawesome.js'],
+  plugins: [
+    '~/plugins/composition-api.js',
+    '~/plugins/fontawesome.js',
+    '@/plugins/vee-validate.js'
+  ],
   /*
    ** Nuxt.js dev-modules
    */
@@ -63,6 +67,8 @@ export default {
    ** Build configuration
    */
   build: {
+    // Require by vee-validate
+    transpile: ['vee-validate/dist/rules'],
     /*
      ** You can extend webpack config here
      */
