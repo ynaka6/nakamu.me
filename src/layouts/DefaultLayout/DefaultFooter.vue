@@ -8,39 +8,14 @@
       <div class="container mx-auto">
         <div class="flex justify-center text-xs">
           <a
-            href="https://twitter.com/nakanakamu0828"
+            v-for="(social, index) in socialList"
+            :key="index"
+            :href="social.href"
             target="_blank"
             rel="noopener noreferrer"
             class="text-white hover:text-gray-200 mr-4"
           >
-            <font-awesome-icon :icon="['fab', 'twitter']" size="lg" />
-          </a>
-          <a
-            href="https://www.instagram.com/____nakamu____/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Twitter"
-            class="text-white hover:text-gray-200 mr-4"
-          >
-            <font-awesome-icon :icon="['fab', 'instagram']" size="lg" />
-          </a>
-          <a
-            href="https://github.com/nakanakamu0828"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Twitter"
-            class="text-white hover:text-gray-200 mr-4"
-          >
-            <font-awesome-icon :icon="['fab', 'github']" size="lg" />
-          </a>
-          <a
-            href="mailto:yuuki.nakamura.0828@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Twitter"
-            class="text-white hover:text-gray-200"
-          >
-            <font-awesome-icon :icon="['fas', 'envelope']" size="lg" />
+            <font-awesome-icon :icon="social.icon" size="lg" />
           </a>
         </div>
         <div class="mt-1 flex justify-center text-xs">
@@ -55,6 +30,7 @@
 import { defineComponent } from '@vue/composition-api'
 import NBreadcrumb from '@/components/NBreadcrumb.vue'
 import { useBreadcrumbs } from '@/store/modules/breadcrumbs'
+import socialList from '@/assets/json/socialList.json'
 
 export default defineComponent({
   components: {
@@ -63,7 +39,8 @@ export default defineComponent({
   setup() {
     return {
       drawer: false,
-      breadcrumbs: useBreadcrumbs()
+      breadcrumbs: useBreadcrumbs(),
+      socialList
     }
   }
 })
