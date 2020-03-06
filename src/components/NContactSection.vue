@@ -127,7 +127,6 @@ import { defineComponent } from '@vue/composition-api'
 
 export default defineComponent({
   setup() {
-    // const isActive: boolean = true
     const name: string = ''
     const email: string = ''
     const content: string = ''
