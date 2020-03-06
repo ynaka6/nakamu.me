@@ -1,6 +1,6 @@
 <template>
   <client-only>
-    <div id="wrapper" class="m-auto flex justify-center">
+    <div class="m-auto flex justify-center">
       <!-- contact form description -->
       <div class="contact-form bg-light rounded-lg w-full p-4 mb-6 lg:w-2/3">
         <div
@@ -122,8 +122,6 @@
 
 <script lang="ts">
 import { defineComponent } from '@vue/composition-api'
-// reactive is disable
-// watch is disable
 
 export default defineComponent({
   setup() {
@@ -138,28 +136,9 @@ export default defineComponent({
     }
   }
 })
-
-// default scripts
-
-// setup(props,context){
-//     needContactForm:!context.root.$route.path.includes('contact')
-// })
-// watch(()=>{
-// state.needContactForm=!context.root.$route.path.includes('contact')
-// })
-// /*eslint-disable*/
-// console.log(props)
-// return{
-// state
-// }
-// }
 </script>
 
 <style scoped>
-#wrapper {
-  animation: 1.5s appear;
-}
-
 :focus {
   box-shadow: 0px 0px 5px 0px theme('colors.red.500');
   @apply bg-white rounded-full border border-primary-500;
@@ -196,14 +175,5 @@ export default defineComponent({
 .sendBtn:hover {
   box-shadow: 0px 0px 5px 0px theme('colors.red.500');
   @apply bg-white rounded-full border-primary-500 text-primary-500;
-}
-
-@keyframes appear {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 </style>
