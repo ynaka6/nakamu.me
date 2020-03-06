@@ -104,8 +104,8 @@
               <div class="px-1 mb-2 text-center">
                 <button
                   type="submit"
-                  :class="{ buttonActive: invalid }"
-                  class="sendButton mx-auto w-full py-5 px-2 rounded-full rounded-lg mt-10 text-white bg-primary-500 font-bold uppercase lg:px-4 md:w-2/5"
+                  :class="{ buttonInActive: invalid }"
+                  class="sendBtn mx-auto w-full py-5 px-2 rounded-full mt-10 text-white bg-primary-500 font-bold uppercase lg:px-4 md:w-2/5"
                   :disabled="invalid"
                 >
                   <font-awesome-icon :icon="['fas', 'envelope']" class="mr-2" />
@@ -127,7 +127,6 @@ import { defineComponent } from '@vue/composition-api'
 
 export default defineComponent({
   setup() {
-    // const isActive: boolean = true
     const name: string = ''
     const email: string = ''
     const content: string = ''
@@ -170,11 +169,6 @@ export default defineComponent({
   @apply text-center;
 }
 
-button:hover {
-  box-shadow: 0px 0px 5px 0px theme('colors.red.500');
-  @apply bg-white border-primary-500 text-primary-500;
-}
-
 .must {
   @apply text-primary-500;
 }
@@ -183,8 +177,25 @@ button:hover {
   @apply outline-none;
 }
 
-.buttonActive {
-  @apply mx-auto w-full py-5 px-2 rounded-full rounded-lg mt-10 text-white bg-primary-300 font-bold uppercase;
+.buttonInActive {
+  @apply mx-auto w-full py-5 px-2 rounded-full mt-10 text-white bg-primary-200 font-bold uppercase pointer-events-none;
+}
+
+@screen md {
+  .buttonInActive {
+    @apply w-2/5;
+  }
+}
+
+@screen lg {
+  .buttonInActive {
+    @apply px-4;
+  }
+}
+
+.sendBtn:hover {
+  box-shadow: 0px 0px 5px 0px theme('colors.red.500');
+  @apply bg-white rounded-full border-primary-500 text-primary-500;
 }
 
 @keyframes appear {
