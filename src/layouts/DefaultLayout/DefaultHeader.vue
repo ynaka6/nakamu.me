@@ -46,10 +46,10 @@ export default defineComponent({
 
 <style scoped>
 .header {
-  @apply fixed w-full z-10 top-0 shadow;
+  @apply w-full z-10;
 }
 .nav {
-  @apply w-full fixed items-center justify-between flex-wrap px-6 bg-white;
+  @apply w-full items-center justify-between flex-wrap px-6 bg-white;
 }
 .container {
   @apply mx-auto;

@@ -2,8 +2,8 @@
   <div class="flex flex-col">
     <div class="min-h-screen flex flex-col">
       <default-header />
-      <div class="flex flex-grow" style="margin-top: 4.5rem;">
-        <div class="w-full overflow-hidden py-8 lg:py-12">
+      <div class="flex flex-grow">
+        <div class="w-full overflow-hidden py-4">
           <nuxt />
         </div>
       </div>
