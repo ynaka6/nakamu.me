@@ -15,7 +15,7 @@
           <div class="hidden lg:block text-primary-500">
             <ul class="flex font-quicksand">
               <li v-for="(menu, index) in menuList" :key="index">
-                <nuxt-link :to="menu.to" class="mr-4 hover:opacity-75">
+                <nuxt-link :to="menu.to" class="menu-link mr-4">
                   {{ menu.text }}
                 </nuxt-link>
               </li>
@@ -53,5 +53,25 @@ export default defineComponent({
 }
 .container {
   @apply mx-auto;
+}
+.menu-link {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+.menu-link::after {
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 4px;
+  background: #45B7FF;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: transform 0.5s;
+}
+.menu-link:hover::after {
+  transform: scale(1, 1);
 }
 </style>
