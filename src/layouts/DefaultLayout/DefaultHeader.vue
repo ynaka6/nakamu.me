@@ -55,18 +55,14 @@ export default defineComponent({
   @apply mx-auto;
 }
 .menu-link {
-  position: relative;
-  display: inline-block;
-  text-decoration: none;
+  @apply relative inline-block no-underline;
 }
 .menu-link::after {
-  position: absolute;
+  @apply absolute left-0 w-full;
   bottom: -6px;
-  left: 0;
   content: '';
-  width: 100%;
   height: 4px;
-  background: #45B7FF;
+  background: #45b7ff;
   transform: scale(0, 1);
   transform-origin: left top;
   transition: transform 0.5s;
