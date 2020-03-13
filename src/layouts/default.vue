@@ -1,10 +1,10 @@
 <template>
   <div class="flex flex-col">
-    <div class="min-h-screen flex flex-col">
+    <div class="wrap-parent min-h-screen flex flex-col">
       <default-header />
       <div class="flex flex-grow">
         <div class="w-full overflow-hidden py-4">
-          <nuxt />
+          <nuxt class="wrap-child" />
         </div>
       </div>
       <default-footer />
@@ -31,3 +31,17 @@ export default defineComponent({
   }
 })
 </script>
+
+<style scoped>
+/* 縦幅を中央近くに揃えるCSSの親要素 */
+.wrap-parent {
+  @apply relative;
+  height: 300px;
+}
+
+/* 縦幅を中央近くに揃えるCSSの子要素 */
+.wrap-child {
+  @apply absolute inset-0;
+  height: 600px;
+}
+</style>

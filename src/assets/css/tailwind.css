@@ -2,14 +2,14 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-@import url("https://fonts.googleapis.com/css?family=Leckerli+One");
-@import url("https://fonts.googleapis.com/css?family=Quicksand");
+@import url('https://fonts.googleapis.com/css?family=Leckerli+One');
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
 
 .font-leckerli-one {
-    font-family: 'Leckerli One', cursive;
+  font-family: 'Leckerli One', cursive;
 }
 .font-quicksand {
-    font-family: 'Quicksand', sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .page-enter-active,
