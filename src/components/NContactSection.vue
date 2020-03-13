@@ -1,6 +1,6 @@
 <template>
   <client-only>
-    <div class="m-auto flex justify-center">
+    <div class="m-auto h-full flex justify-center items-center">
       <!-- contact form description -->
       <div class="contact-form bg-light rounded-lg w-full p-4 mb-6 lg:w-2/3">
         <div

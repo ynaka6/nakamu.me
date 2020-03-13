@@ -4,7 +4,7 @@
       <default-header />
       <div class="flex flex-grow">
         <div class="w-full overflow-hidden py-4">
-          <nuxt class="wrap-child" />
+          <nuxt />
         </div>
       </div>
       <default-footer />
@@ -31,17 +31,3 @@ export default defineComponent({
   }
 })
 </script>
-
-<style scoped>
-/* 縦幅を中央近くに揃えるCSSの親要素 */
-.wrap-parent {
-  @apply relative;
-  height: 300px;
-}
-
-/* 縦幅を中央近くに揃えるCSSの子要素 */
-.wrap-child {
-  @apply absolute inset-0;
-  height: 600px;
-}
-</style>
