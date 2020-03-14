@@ -87,7 +87,6 @@ export default {
   generate: {
     routes: [
       '/about',
-      '/skills',
       '/works',
       '/contents',
       '/contact',
