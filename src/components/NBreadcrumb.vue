@@ -3,9 +3,13 @@
     <nav class="container">
       <ol class="breadcrumb">
         <li v-for="breadcrumb in breadcrumbs" :key="breadcrumb.name">
-          <nuxt-link v-if="breadcrumb.to" :to="breadcrumb.to">
+          <nuxt-link
+            v-if="breadcrumb.to"
+            :to="breadcrumb.to"
+            :class="[breadcrumb.color]"
+          >
             <font-awesome-icon v-if="breadcrumb.icon" :icon="breadcrumb.icon" />
-            {{ breadcrumb.name }}
+            <span v-if="breadcrumb.name">{{ breadcrumb.name }}</span>
           </nuxt-link>
           <span v-else>
             <font-awesome-icon v-if="breadcrumb.icon" :icon="breadcrumb.icon" />
