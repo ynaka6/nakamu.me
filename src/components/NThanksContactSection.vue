@@ -1,7 +1,7 @@
 <template>
   <div class="m-auto flex justify-center">
     <!-- thanks contact description -->
-    <div class="bg-light rounded-lg w-full p-4 mb-6 lg:w-2/3">
+    <div class="rounded-lg w-full p-4 mb-6 lg:w-2/3">
       <!-- title section -->
       <div class="contact-thanks flex justify-center items-center w-full">
         <p

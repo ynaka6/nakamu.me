@@ -25,6 +25,8 @@
     "@nuxtjs/tailwindcss": "^1.0.0",
     "@vue/composition-api": "^0.4.0",
     "nuxt": "^2.0.0",
+    "postcss-calc": "^7.0.2",
+    "postcss-for": "^2.1.1",
     "vee-validate": "^3.2.5"
   },
   "devDependencies": {

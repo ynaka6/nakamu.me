@@ -78,6 +78,14 @@ export default {
   build: {
     // Require by vee-validate
     transpile: ['vee-validate/dist/rules'],
+
+    postcss: {
+      plugins: {
+        'postcss-for': {},
+        'postcss-calc': {},
+      }
+    },
+
     /*
      ** You can extend webpack config here
      */
