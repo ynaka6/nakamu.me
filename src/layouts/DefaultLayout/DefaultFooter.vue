@@ -5,22 +5,20 @@
       :breadcrumbs="breadcrumbs"
     />
     <div class="bg-dark text-gray-100 px-2 py-3">
-      <div class="container mx-auto">
-        <div class="flex justify-center text-xs">
-          <a
-            v-for="(social, index) in socialList"
-            :key="index"
-            :href="social.href"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-white hover:text-gray-200 mr-4"
-          >
-            <font-awesome-icon :icon="social.icon" size="lg" />
-          </a>
-        </div>
-        <div class="mt-1 flex justify-center text-xs">
-          @nakamu.life
-        </div>
+      <div class="flex justify-center text-xs">
+        <a
+          v-for="(social, index) in socialList"
+          :key="index"
+          :href="social.href"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-white hover:text-gray-200 mr-4"
+        >
+          <font-awesome-icon :icon="social.icon" size="lg" />
+        </a>
+      </div>
+      <div class="mt-1 flex justify-center text-xs">
+        @nakamu.life
       </div>
     </div>
   </footer>

@@ -141,7 +141,7 @@ export default defineComponent({
 <style scoped>
 :focus {
   box-shadow: 0px 0px 5px 0px theme('colors.red.500');
-  @apply bg-white rounded-full border border-primary-500;
+  @apply bg-white border border-primary-500;
 }
 
 ::placeholder {

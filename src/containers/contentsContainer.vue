@@ -13,7 +13,7 @@ export default defineComponent({
   },
   setup() {
     setBreadcrumbs([
-      { to: '/', name: 'HOME', icon: ['fas', 'home'] },
+      { to: '/', icon: ['fas', 'fire'], color: 'text-primary-500' },
       { to: null, name: 'Contents' }
     ])
     return {}

@@ -1,3 +1,14 @@
+const buildModules = [];
+if (process.env.NODE_ENV !== 'production') {
+  buildModules.push(...[
+    // Doc: https://github.com/nuxt-community/eslint-module
+    '@nuxtjs/eslint-module',
+    // Doc: https://github.com/nuxt-community/stylelint-module
+    '@nuxtjs/stylelint-module'
+  ])  
+}
+
+
 export default {
   mode: 'universal',
 
@@ -39,14 +50,12 @@ export default {
    ** Nuxt.js dev-modules
    */
   buildModules: [
-    // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module',
-    // Doc: https://github.com/nuxt-community/stylelint-module
-    '@nuxtjs/stylelint-module',
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     '@nuxtjs/tailwindcss',
 
-    '@nuxt/typescript-build'
+    '@nuxt/typescript-build',
+
+    ...buildModules
   ],
   /*
    ** Nuxt.js modules
@@ -69,6 +78,14 @@ export default {
   build: {
     // Require by vee-validate
     transpile: ['vee-validate/dist/rules'],
+
+    postcss: {
+      plugins: {
+        'postcss-for': {},
+        'postcss-calc': {},
+      }
+    },
+
     /*
      ** You can extend webpack config here
      */
@@ -87,7 +104,6 @@ export default {
   generate: {
     routes: [
       '/about',
-      '/skills',
       '/works',
       '/contents',
       '/contact',

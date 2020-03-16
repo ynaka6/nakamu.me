@@ -1,11 +1,15 @@
 <template>
   <div class="breadcrumb-nav">
-    <nav class="container">
+    <nav>
       <ol class="breadcrumb">
         <li v-for="breadcrumb in breadcrumbs" :key="breadcrumb.name">
-          <nuxt-link v-if="breadcrumb.to" :to="breadcrumb.to">
+          <nuxt-link
+            v-if="breadcrumb.to"
+            :to="breadcrumb.to"
+            :class="[breadcrumb.color]"
+          >
             <font-awesome-icon v-if="breadcrumb.icon" :icon="breadcrumb.icon" />
-            {{ breadcrumb.name }}
+            <span v-if="breadcrumb.name">{{ breadcrumb.name }}</span>
           </nuxt-link>
           <span v-else>
             <font-awesome-icon v-if="breadcrumb.icon" :icon="breadcrumb.icon" />
@@ -32,7 +36,7 @@ export default defineComponent({
 
 <style scoped>
 .breadcrumb-nav {
-  @apply w-full bg-gray-100;
+  @apply w-full bg-gray-300;
 }
 .container {
   @apply mx-auto h-full;
