@@ -1,6 +1,6 @@
 <template>
   <div class="breadcrumb-nav">
-    <nav class="container">
+    <nav>
       <ol class="breadcrumb">
         <li v-for="breadcrumb in breadcrumbs" :key="breadcrumb.name">
           <nuxt-link
