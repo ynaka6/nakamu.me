@@ -7079,6 +7079,7 @@ postcss-font-variant@^4.0.0:
 postcss-for@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/postcss-for/-/postcss-for-2.1.1.tgz#841378c0ef909d50e1980d5aa71e6a340e728fcd"
+  integrity sha1-hBN4wO+QnVDhmA1apx5qNA5yj80=
   dependencies:
     postcss "^5.0.0"
     postcss-simple-vars "^2.0.0"

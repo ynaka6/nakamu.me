@@ -1,47 +1,40 @@
 <template>
-  <client-only>
+  <div
+    class="m-auto h-full items-center
+  flex justify-center text-gray-700"
+  >
     <div
-      class="m-auto h-full items-center
-    flex justify-center"
+      class="change bg-light flex flex-col lg:flex-row w-full justify-center items-center p-4 mb-6 lg:w-2/3"
     >
-      <!-- thanks contact description -->
-      <div class="bg-light w-full p-4 mb-6 lg:w-2/3">
-        <!-- title section -->
-        <div class="contact-thanks flex justify-center items-center w-full">
-          <img
-            src="~assets/images/icon/profile.fc674b16.jpg"
-            class="contact-thanks__title pb-1 w-1/2 rounded-full bg-primary-500 text-left text-dark text-lg lg:text-2xl mb-4 mr-0"
-          />
-        </div>
-        <!-- sentence section -->
-        <div class="max-w-2/3">
-          <div class="px-1 mb-2 text-center">
-            <div
-              class="block mt-6 mb-4 font-semibold text-primary-500 tracking-wider text-2xl"
-            >
-              お問い合わせありがとうございます。
-            </div>
-            <p class="w-full text-center border-primary-500 pt-4 text-gray-800">
-              この度はお問い合わせ頂きありがとうございます。
-            </p>
-            <p class="w-2/1 text-center border-primary-500 p-0 text-gray-800">
-              ご入力頂きましたメールアドレスに後ほどご連絡をさせて頂きますので、<br />今しばらくお待ちください。
-            </p>
-          </div>
-          <div class="px-1 mb-2 text-center">
-            <nuxt-link to="/">
-              <button
-                type="submit"
-                class="sendBtn mx-auto w-full py-5 px-2 rounded-full mt-10 text-white bg-primary-500 font-bold uppercase lg:px-4 md:w-2/5"
-              >
-                TOPへ戻る
-              </button>
-            </nuxt-link>
-          </div>
-        </div>
+      <!-- logo section -->
+      <img
+        src="~assets/images/icon/profile.fc674b16.jpg"
+        class="lg:mr-8 box-border logo-img flex justify-center img-fluid rounded-full text-left text-lg lg:text-2xl mb-4 mr-0"
+      />
+
+      <!-- sentence section -->
+      <div class="sentence flex flex-col">
+        <!-- greet section -->
+        <p class="greeting text-center mb-1">
+          <span class="text-primary-500">H</span>ello world!!
+        </p>
+        <!-- sentence title section -->
+        <p class="title text-center mb-2 text-3xl font-semibold">
+          I'm a<span class="text-primary-500">&nbsp;Web developer!!!</span>
+        </p>
+        <!-- setence desc section -->
+        <p class="text-xs">
+          香港在住3年目になるWEBエンジニアのなかむです。<br />
+          現在は、LaravelやRailsを利用したWEB開発を中心にエンジニアを<br />
+          しています。
+        </p>
+        <p class="mt-1 text-xs">
+          顧客は全て日本の企業になります。<br />
+          リモート開発にて各企業様の支援を行なっております。
+        </p>
       </div>
     </div>
-  </client-only>
+  </div>
 </template>
 
 <script lang="ts">
@@ -55,7 +48,18 @@ button:hover {
   @apply bg-white rounded-full border-primary-500 text-primary-500;
 }
 
+.logo-img {
+  max-width: 300px;
+  max-height: 300px;
+}
+
 button:focus {
   @apply outline-none;
+}
+
+@screen lg {
+  .sentence > p {
+    @apply text-left;
+  }
 }
 </style>
