@@ -36,7 +36,7 @@ export default defineComponent({
 
 <style scoped>
 .breadcrumb-nav {
-  @apply w-full bg-gray-300;
+  @apply w-full bg-white border-t;
 }
 .container {
   @apply mx-auto h-full;
