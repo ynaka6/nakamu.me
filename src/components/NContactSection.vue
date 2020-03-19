@@ -2,32 +2,11 @@
   <client-only>
     <div class="m-auto h-full flex justify-center items-center">
       <!-- contact form description -->
-      <div class="contact-form bg-light rounded-lg w-full p-4 mb-6 lg:w-2/3">
-        <div
-          class="contact-form__title flex justify-center items-center w-full"
-        >
-          <p
-            class="contact-form__title__left hidden sm:w-2/4 sm:border-r sm:inline-block sm:border-primary-500 sm:text-right sm:pr-10 text-dark text-lg lg:text-2xl mb-4 mr-0"
-          >
-            Let's Play Together.
-          </p>
-
-          <!-- MOBILE Responsive -->
-          <p
-            class="contact-form__title__mobile sm:hidden pb-1 w-1/2 border-b inline-block border-primary-500  text-center text-dark text-lg lg:text-2xl mb-4 mr-0"
-          >
-            Let's Play Together.
-          </p>
-
-          <p
-            class="contact-form__title__right hidden sm:inline-block w-2/4 border-l border-primary-500 inline-block text-left pl-10 text-dark text-lg lg:text-2xl mb-4"
-          >
-            <span class="contact-form__title__right__span text-sm">
-              お仕事募集中。一緒にプログラミングしましょう。
-            </span>
-          </p>
-        </div>
-
+      <div class="contact-form bg-light rounded-lg w-full p-4 mb-6 lg:w-3/5">
+        <n-title :title="title" class="text-center mb-1" />
+        <p class="text-center text-sm text-gray-700 mb-4">
+          開発・メンター依頼受付中！一緒にプログラミングを！！
+        </p>
         <!-- form section -->
         <validation-observer v-slot="{ invalid }">
           <form
@@ -35,7 +14,7 @@
             name="contact"
             action="/contact/thanks"
             method="post"
-            class="max-w-2/3"
+            class="bg-white shadow-xl leading-normal p-4 lg:p-6"
           >
             <!-- data-netlify="true" -->
             <!-- data-netlify-honeypot="bot-field" -->
@@ -53,7 +32,7 @@
                   v-model="name"
                   type="text"
                   name="お名前"
-                  class="w-full border-primary-500 bg-gray-100 rounded-full p-4 border text-gray-800 md:w-9/12"
+                  class="w-full bg-gray-100 border border-primary-500 rounded-full p-4 text-gray-800"
                   placeholder="山田 太郎"
                 />
                 <span class="block mt-2 text-red-700 font-bold">
@@ -72,7 +51,7 @@
                   v-model="email"
                   type="email"
                   name="メールアドレス"
-                  class="w-full border-primary-500 bg-gray-100 rounded-full p-4 border text-gray-800 md:w-9/12"
+                  class="w-full bg-gray-100 border border-primary-500 rounded-full p-4 text-gray-800"
                   placeholder="yamada@example.com"
                 />
                 <span class="block mt-2 text-red-700 font-bold">
@@ -90,7 +69,7 @@
                   id="content"
                   v-model="content"
                   name="お問い合わせ内容"
-                  class="w-full border-primary-500 bg-gray-100 rounded-full rounded-lg p-4 border text-gray-800 md:w-9/12"
+                  class="w-full bg-gray-100 border border-primary-500 rounded-full rounded-lg p-4 text-gray-800"
                   col="4"
                   row="10"
                   placeholder=""
@@ -122,14 +101,20 @@
 
 <script lang="ts">
 import { defineComponent } from '@vue/composition-api'
+import NTitle from '~/elements/NTitle.vue'
 
 export default defineComponent({
+  components: {
+    NTitle
+  },
   setup() {
+    const title: string = 'Contact'
     const name: string = ''
     const email: string = ''
     const content: string = ''
 
     return {
+      title,
       name,
       email,
       content
