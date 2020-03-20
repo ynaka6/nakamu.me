@@ -44,7 +44,8 @@ export default {
   plugins: [
     '~/plugins/composition-api.js',
     '~/plugins/fontawesome.js',
-    '@/plugins/vee-validate.js'
+    '~/plugins/vee-validate.js',
+    '~/plugins/vue-scrollto.js'
   ],
   /*
    ** Nuxt.js dev-modules

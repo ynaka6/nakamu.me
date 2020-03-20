@@ -27,7 +27,8 @@
     "nuxt": "^2.0.0",
     "postcss-calc": "^7.0.2",
     "postcss-for": "^2.1.1",
-    "vee-validate": "^3.2.5"
+    "vee-validate": "^3.2.5",
+    "vue-scrollto": "^2.17.1"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^2.0.0",
