@@ -1,7 +1,7 @@
 <template>
   <div class="container mx-auto">
     <div class="flex justify-center">
-      <div class="w-full px-2 lg:px-0 lg:w-3/5">
+      <div class="w-full lg:w-3/5">
         <n-title :title="title" class="text-center mb-1" />
         <p class="text-center text-sm text-gray-700 mb-4">
           プログラマーとして色々な業界を転々とする私について
