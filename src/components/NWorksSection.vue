@@ -20,7 +20,7 @@ export default defineComponent({
     NTitle
   },
   setup() {
-    const title: string = 'Works'
+    const title: string = 'Projects and Works'
     return {
       title
     }

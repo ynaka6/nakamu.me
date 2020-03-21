@@ -18,15 +18,28 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: process.env.npm_package_name || '',
+    titleTemplate: '%s | Nakamu.life',
+    htmlAttrs: {
+      lang: 'ja'
+    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
-      }
+        content: '香港在住のWebデベロッパー「なかむ」のプロフィール紹介ページです。エンジニアとしての経歴やどんなスキルを持っているかなど自己紹介となります。'
+      },
+      {
+        hid: 'og:title',
+        name: 'og:title',
+        content: '香港でWebデベロッパーやってる「なかむ」です。'
+      },
+      {
+        hid: 'og:description',
+        name: 'og:description',
+        content: '香港在住のWebデベロッパー「なかむ」のプロフィール紹介ページです。エンジニアとしての経歴やどんなスキルを持っているかなど自己紹介となります。'
+      },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },

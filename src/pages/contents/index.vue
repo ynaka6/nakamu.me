@@ -13,7 +13,7 @@ export default Vue.extend({
   },
   head(): MetaInfo {
     return {
-      title: 'Contents - nakamu.life'
+      title: 'Contents'
     }
   }
 })

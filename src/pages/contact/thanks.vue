@@ -14,7 +14,7 @@ export default Vue.extend({
   },
   head(): MetaInfo {
     return {
-      title: 'Thanks for contacting - nakamu.life'
+      title: 'Thanks for contacting'
     }
   }
 })

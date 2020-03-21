@@ -14,7 +14,7 @@ export default Vue.extend({
   },
   head(): MetaInfo {
     return {
-      title: 'nakamu.life'
+      title: 'Webデベロッパー「なかむ」のプロフィール紹介'
     }
   }
 })
