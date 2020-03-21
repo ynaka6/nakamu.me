@@ -14,13 +14,10 @@
               action="/contact/thanks"
               method="post"
               class="bg-white shadow-xl leading-normal p-4 lg:p-6"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
             >
-              <!-- data-netlify="true" -->
-              <!-- data-netlify-honeypot="bot-field" -->
-
               <input type="hidden" name="form-name" value="contact" />
-
-              <!-- name section -->
               <div class="px-1 mb-2 text-center">
                 <label for="name" class="block mt-6 mb-2 font-semibold">
                   お名前<span class="ml-2 must">*</span>
