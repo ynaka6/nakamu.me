@@ -30,7 +30,7 @@
                     id="name"
                     v-model="name"
                     type="text"
-                    name="お名前"
+                    name="name"
                     class="w-full bg-gray-100 border border-primary-500 rounded-full p-4 text-gray-800"
                     placeholder="山田 太郎"
                   />
@@ -52,7 +52,7 @@
                     id="email"
                     v-model="email"
                     type="email"
-                    name="メールアドレス"
+                    name="email"
                     class="w-full bg-gray-100 border border-primary-500 rounded-full p-4 text-gray-800"
                     placeholder="yamada@example.com"
                   />
@@ -70,7 +70,7 @@
                   <textarea
                     id="content"
                     v-model="content"
-                    name="お問い合わせ内容"
+                    name="content"
                     class="w-full bg-gray-100 border border-primary-500 rounded-full rounded-lg p-4 text-gray-800"
                     col="4"
                     row="10"
