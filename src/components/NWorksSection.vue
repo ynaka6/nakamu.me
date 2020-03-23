@@ -1,11 +1,60 @@
 <template>
   <div class="container mx-auto">
     <div class="flex justify-center">
-      <div class="w-full px-2 lg:px-0 lg:w-3/5">
+      <div class="w-full px-2 lg:px-0 lg:w-4/5">
         <n-title :title="title" class="text-center mb-1" />
         <p class="text-center text-sm text-gray-700 mb-4">
           今までの経歴や開発実績・製作物を紹介します
         </p>
+        <div class="lg:flex p-2 lg:p-6">
+          <div class="mb-4 lg:w-1/2 lg:mr-4">
+            <n-browser-window>
+              <img src="~/assets/images/projects/growhub.com.hk.png" />
+            </n-browser-window>
+            <div class="text-center mt-4">
+              <a
+                href="https://growhub.com.hk/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-xl text-gray-800 underline"
+              >
+                growhub.com.hk
+              </a>
+              <p class="text-xs mt-4">
+                GatsbyJSで構築された香港法人のコーポレートサイトです。
+              </p>
+              <div class="mt-2">
+                <n-tag text="GatsbyJs" class="mr-1" />
+                <n-tag text="Netlify" class="mr-1" />
+                <n-tag text="Tailwind CSS" />
+              </div>
+            </div>
+          </div>
+          <div class="mb-4 lg:w-1/2">
+            <n-browser-window>
+              <img src="~/assets/images/projects/mentor.growhub.com.hk.png" />
+            </n-browser-window>
+            <div class="text-center mt-4">
+              <a
+                href="https://mentor.growhub.com.hk/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-xl text-gray-800 underline"
+              >
+                mentor.growhub.com.hk
+              </a>
+              <p class="text-xs mt-4">
+                GatsbyJSで構築された香港法人のコーポレートサイトです。
+              </p>
+              <div class="mt-2">
+                <n-tag text="Nuxt.js" class="mr-1" />
+                <n-tag text="Netlify" class="mr-1" />
+                <n-tag text="Tailwind CSS" class="mr-1" />
+                <n-tag text="Stripe" />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -14,10 +63,14 @@
 <script lang="ts">
 import { defineComponent } from '@vue/composition-api'
 import NTitle from '~/elements/NTitle.vue'
+import NTag from '~/elements/NTag.vue'
+import NBrowserWindow from '~/components/NBrowserWindow.vue'
 
 export default defineComponent({
   components: {
-    NTitle
+    NTitle,
+    NTag,
+    NBrowserWindow
   },
   setup() {
     const title: string = 'Projects and Works'
