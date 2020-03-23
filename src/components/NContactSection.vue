@@ -24,6 +24,7 @@
                 </label>
                 <validation-provider
                   v-slot="{ errors }"
+                  name="お名前"
                   rules="required|max:50"
                 >
                   <input
@@ -46,6 +47,7 @@
                 </label>
                 <validation-provider
                   v-slot="{ errors }"
+                  name="メールアドレス"
                   rules="required|max:255"
                 >
                   <input
@@ -66,7 +68,11 @@
                 <label for="content" class="block mt-6 mb-2 font-semibold">
                   お問い合わせ内容<span class="ml-2 must">*</span>
                 </label>
-                <validation-provider v-slot="{ errors }" rules="required">
+                <validation-provider
+                  v-slot="{ errors }"
+                  name="お問い合わせ内容"
+                  rules="required"
+                >
                   <textarea
                     id="content"
                     v-model="content"
