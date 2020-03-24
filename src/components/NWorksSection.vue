@@ -6,8 +6,8 @@
         <p class="text-center text-sm text-gray-700 mb-4">
           今までの経歴や開発実績・製作物を紹介します
         </p>
-        <div class="lg:flex p-2 lg:p-6">
-          <div class="mb-4 lg:w-1/2 lg:mr-4">
+        <div class="p-2 lg:flex lg:flex-wrap lg:p-6">
+          <div class="mb-6 lg:w-1/2 lg:px-2">
             <n-browser-window>
               <img src="~/assets/images/projects/growhub.com.hk.png" />
             </n-browser-window>
@@ -30,7 +30,7 @@
               </div>
             </div>
           </div>
-          <div class="mb-4 lg:w-1/2">
+          <div class="mb-6 lg:w-1/2 lg:px-2">
             <n-browser-window>
               <img src="~/assets/images/projects/mentor.growhub.com.hk.png" />
             </n-browser-window>
@@ -44,7 +44,7 @@
                 mentor.growhub.com.hk
               </a>
               <p class="text-xs mt-4">
-                GatsbyJSで構築された香港法人のコーポレートサイトです。
+                Nuxt.jsを利用したメンター契約の為のサイトです。Stripeを利用して決済を行い、メンター契約となります
               </p>
               <div class="mt-2">
                 <n-tag text="Nuxt.js" class="mr-1" />
