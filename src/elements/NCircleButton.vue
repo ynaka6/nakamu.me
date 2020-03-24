@@ -4,8 +4,9 @@
     :href="href"
     :target="target"
     :rel="rel"
-    class="flex text-white rounded-full px-8 py-2 mt-2 font-bold bg-primary-500 items-center justify-center no-underline"
+    class="flex text-lg rounded-full px-8 py-2 font-bold items-center justify-center no-underline"
   >
+    <!-- ボタンに表示する文 -->
     {{ text }}
     <slot />
   </component>
