@@ -36,6 +36,9 @@
           顧客は全て日本の企業になります。<br />
           リモート開発にて各企業様の支援を行なっております。
         </p>
+        <nuxt-link to="/about">
+          <n-circle-button text="More About" :tagName="tagName" />
+        </nuxt-link>
       </div>
     </div>
   </div>
@@ -43,11 +46,17 @@
 
 <script lang="ts">
 import { defineComponent } from '@vue/composition-api'
+import NCircleButton from '~/elements/NCircleButton.vue'
 export default defineComponent({
+  components: {
+    NCircleButton
+  },
   setup() {
+    const tagName: string = 'button'
     return {
       transition: 'delay-appear-logo',
-      mode: 'out-in'
+      mode: 'out-in',
+      tagName
     }
   }
 })
