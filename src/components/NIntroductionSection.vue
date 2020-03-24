@@ -5,7 +5,7 @@
   flex justify-center text-gray-700"
   >
     <div
-      class="change bg-light flex flex-col lg:flex-row w-full justify-center items-center py-4 mb-6 lg:w-full"
+      class="change bg-white shadow-xl px-6 py-10 flex flex-col lg:flex-row w-4/5 justify-center items-center mb-6"
     >
       <!-- logo section -->
       <transition appear name="delay-appear-logo">
