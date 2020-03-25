@@ -4,8 +4,10 @@
     :href="href"
     :target="target"
     :rel="rel"
-    class="inline-flex w-10 h-10 mr-2 rounded-full font-semibold flex items-center justify-center font-hairline no-underline"
+    class="flex text-lg rounded-full px-8 py-2 font-bold items-center justify-center no-underline"
   >
+    <!-- ボタンに表示する文 -->
+    {{ text }}
     <slot />
   </component>
 </template>
@@ -18,7 +20,7 @@ export default defineComponent({
     tagName: {
       type: String,
       required: false,
-      default: 'a'
+      default: null
     },
     href: {
       type: String,
@@ -31,6 +33,11 @@ export default defineComponent({
       default: null
     },
     rel: {
+      type: String,
+      required: false,
+      default: null
+    },
+    text: {
       type: String,
       required: false,
       default: null
