@@ -1,20 +1,20 @@
 <template>
-  <n-works-section />
+  <n-experiences-section />
 </template>
 
 <script lang="ts">
 import { defineComponent } from '@vue/composition-api'
 import { setBreadcrumbs } from '@/store/modules/breadcrumbs'
-import NWorksSection from '~/components/NWorksSection.vue'
+import NExperiencesSection from '~/components/NExperiencesSection.vue'
 
 export default defineComponent({
   components: {
-    NWorksSection
+    NExperiencesSection
   },
   setup() {
     setBreadcrumbs([
       { to: '/', icon: ['fas', 'fire'], color: 'text-primary-500' },
-      { to: null, name: 'Works' }
+      { to: null, name: 'Work Experience' }
     ])
     return {}
   }

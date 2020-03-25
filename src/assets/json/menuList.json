@@ -1,6 +1,6 @@
 [
     { "to": "/about", "text": "About" },
-    { "to": "/works", "text": "Works" },
+    { "to": "/projects", "text": "Works" },
     { "to": "/contents", "text": "Contents" },
     { "to": "/contact", "text": "Contact" },
     { "href": "https://blog.nakamu.life", "text": "Blog", "target": "_blank" }

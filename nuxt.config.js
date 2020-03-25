@@ -1,13 +1,14 @@
-const buildModules = [];
+const buildModules = []
 if (process.env.NODE_ENV !== 'production') {
-  buildModules.push(...[
-    // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module',
-    // Doc: https://github.com/nuxt-community/stylelint-module
-    '@nuxtjs/stylelint-module'
-  ])  
+  buildModules.push(
+    ...[
+      // Doc: https://github.com/nuxt-community/eslint-module
+      '@nuxtjs/eslint-module',
+      // Doc: https://github.com/nuxt-community/stylelint-module
+      '@nuxtjs/stylelint-module'
+    ]
+  )
 }
-
 
 export default {
   mode: 'universal',
@@ -28,7 +29,8 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: '香港在住のWebデベロッパー「なかむ」のプロフィール紹介ページです。エンジニアとしての経歴やどんなスキルを持っているかなど自己紹介となります。'
+        content:
+          '香港在住のWebデベロッパー「なかむ」のプロフィール紹介ページです。エンジニアとしての経歴やどんなスキルを持っているかなど自己紹介となります。'
       },
       {
         hid: 'og:title',
@@ -38,8 +40,9 @@ export default {
       {
         hid: 'og:description',
         name: 'og:description',
-        content: '香港在住のWebデベロッパー「なかむ」のプロフィール紹介ページです。エンジニアとしての経歴やどんなスキルを持っているかなど自己紹介となります。'
-      },
+        content:
+          '香港在住のWebデベロッパー「なかむ」のプロフィール紹介ページです。エンジニアとしての経歴やどんなスキルを持っているかなど自己紹介となります。'
+      }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
@@ -96,7 +99,7 @@ export default {
     postcss: {
       plugins: {
         'postcss-for': {},
-        'postcss-calc': {},
+        'postcss-calc': {}
       }
     },
 
@@ -118,7 +121,8 @@ export default {
   generate: {
     routes: [
       '/about',
-      '/works',
+      '/projects',
+      '/experiences',
       '/contents',
       '/contact',
       '/contact/thanks'

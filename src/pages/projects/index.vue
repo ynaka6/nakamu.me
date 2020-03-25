@@ -1,5 +1,5 @@
 <template>
-  <works-container />
+  <projects-container />
 </template>
 
 <script lang="ts">
@@ -7,9 +7,9 @@ import Vue from 'vue'
 import { MetaInfo } from 'vue-meta'
 
 export default Vue.extend({
-  name: 'Works',
+  name: 'Projects',
   components: {
-    worksContainer: () => import('@/containers/worksContainer.vue')
+    projectsContainer: () => import('@/containers/projectsContainer.vue')
   },
   head(): MetaInfo {
     return {
