@@ -5,13 +5,13 @@
   flex justify-center text-gray-700"
   >
     <div
-      class="change bg-white shadow-xl px-6 py-10 flex flex-col lg:flex-row w-4/5 justify-center items-center mb-6"
+      class="change px-6 py-10 flex flex-col lg:flex-row w-full justify-center items-center mb-6"
     >
       <!-- logo section -->
       <transition appear name="delay-appear-logo">
         <img
           src="~assets/images/icon/profile.fc674b16.jpg"
-          class="lg:mr-8 box-border mb-5 logo-img flex justify-center img-fluid rounded-full text-left text-lg lg:mb-0 lg:text-2xl mr-0"
+          class="lg:mr-8 shadow-xl box-border mb-5 logo-img flex justify-center img-fluid rounded-full text-left text-lg lg:mb-0 lg:text-2xl mr-0"
         />
       </transition>
 
@@ -38,9 +38,9 @@
           顧客は全て日本の企業になります。<br />
           リモート開発にて各企業様の支援を行なっております。
         </p>
-        <div class="flex flex-row justify-center w-full lg:w-2/3">
+        <div class="flex flex-row justify-center w-full lg:w-3/4">
           <nuxt-link to="/about">
-            <n-circle-button
+            <n-round-button
               class="more-about bg-primary-500 text-white"
               text="More About"
               :tag-name="tagName"
@@ -48,7 +48,7 @@
           </nuxt-link>
 
           <nuxt-link to="/works">
-            <n-circle-button
+            <n-round-button
               class="my-works mx-5 bg-white text-primary-500 border border-primary-500"
               text="My Works"
               :tag-name="tagName"
@@ -62,10 +62,10 @@
 
 <script lang="ts">
 import { defineComponent } from '@vue/composition-api'
-import NCircleButton from '~/elements/NCircleButton.vue'
+import NRoundButton from '~/elements/NRoundButton.vue'
 export default defineComponent({
   components: {
-    NCircleButton
+    NRoundButton
   },
   setup() {
     const tagName: string = 'button'
