@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <div class="flex justify-center my-2">
+    <div v-if="state.scrollY > 100" class="flex justify-center my-2">
       <nuxt-link v-scroll-to="'body'" to class="text-center">
         <font-awesome-icon icon="chevron-up" size="lg" />
         <div class="text-xs text-gray-800">
@@ -33,7 +33,13 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from '@vue/composition-api'
+import {
+  defineComponent,
+  reactive,
+  ref,
+  onMounted,
+  onUnmounted
+} from '@vue/composition-api'
 import NBreadcrumb from '@/components/NBreadcrumb.vue'
 import { useBreadcrumbs } from '@/store/modules/breadcrumbs'
 import socialList from '@/assets/json/socialList.json'
@@ -43,10 +49,25 @@ export default defineComponent({
     NBreadcrumb
   },
   setup() {
+    const state = reactive({
+      scrollY: ref(0)
+    })
+    const handleScroll = () => {
+      state.scrollY = window.scrollY
+    }
+
+    onMounted(() => {
+      window.addEventListener('scroll', handleScroll)
+    })
+    onUnmounted(() => {
+      window.removeEventListener('scroll', handleScroll)
+    })
+
     return {
-      drawer: false,
+      state,
       breadcrumbs: useBreadcrumbs(),
-      socialList
+      socialList,
+      handleScroll
     }
   }
 })
