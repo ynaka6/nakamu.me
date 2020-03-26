@@ -2,6 +2,7 @@
   <component
     :is="tagName"
     :href="href"
+    :to="to"
     :target="target"
     :rel="rel"
     class="flex text-lg rounded-full px-8 py-2 font-bold items-center justify-center no-underline"
@@ -23,6 +24,11 @@ export default defineComponent({
       default: null
     },
     href: {
+      type: String,
+      required: false,
+      default: null
+    },
+    to: {
       type: String,
       required: false,
       default: null

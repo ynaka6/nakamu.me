@@ -7,27 +7,17 @@
     <div
       class="change px-6 py-10 flex flex-col lg:flex-row w-full justify-center items-center mb-6"
     >
-      <!-- logo section -->
       <transition appear name="delay-appear-logo">
         <img
           src="~assets/images/icon/profile.fc674b16.jpg"
-          class="lg:mr-8 shadow-xl box-border mb-5 logo-img flex justify-center img-fluid rounded-full text-left text-lg lg:mb-0 lg:text-2xl mr-0"
+          class="w-40 shadow-xl mb-5 rounded-full text-left mr-0 lg:w-56 lg:mb-0 lg:text-2xl lg:mr-10"
         />
       </transition>
 
-      <!-- sentence section -->
       <div class="sentence flex flex-col">
-        <!-- greet section -->
-        <p
-          class="greeting text-center mb-1 hidden mt-2 lg:mb-2 lg:mt-0 lg:block"
-        >
-          <span class="text-primary-500">H</span>ello world!!
-        </p>
-        <!-- sentence title section -->
-        <p class="title text-center mb-2 lg:mb-5 text-3xl font-semibold">
+        <p class="font-semibold text-center text-3xl mb-2 lg:mb-5 lg:text-5xl">
           I'm a<span class="text-primary-500">&nbsp;Web developer!!!</span>
         </p>
-        <!-- setence desc section -->
         <p class="text-sm lg:text-base">
           香港在住3年目になるWEBエンジニアのなかむです。<br />
           現在は、LaravelやRailsを利用したWEB開発を中心にエンジニアを<br
@@ -38,22 +28,19 @@
           顧客は全て日本の企業になります。<br />
           リモート開発にて各企業様の支援を行なっております。
         </p>
-        <div class="flex flex-row justify-center w-full lg:w-3/4">
-          <nuxt-link to="/about">
-            <n-round-button
-              class="more-about bg-primary-500 text-white"
-              text="More About"
-              :tag-name="tagName"
-            />
-          </nuxt-link>
-
-          <nuxt-link to="/works">
-            <n-round-button
-              class="my-works mx-5 bg-white text-primary-500 border border-primary-500"
-              text="My Works"
-              :tag-name="tagName"
-            />
-          </nuxt-link>
+        <div class="w-full flex justify-center lg:justify-start lg:w-3/4">
+          <n-round-button
+            :tag-name="'nuxt-link'"
+            to="/about"
+            class="more-about bg-primary-500 text-white"
+            text="More About"
+          />
+          <n-round-button
+            :tag-name="'nuxt-link'"
+            to="/projects"
+            class="my-works mx-5 bg-white text-primary-500 border border-primary-500"
+            text="My Works"
+          />
         </div>
       </div>
     </div>
@@ -89,11 +76,6 @@ export default defineComponent({
   @apply bg-primary-500 rounded-full border-primary-500 text-white;
 }
 
-.logo-img {
-  max-width: 250px;
-  max-height: 250px;
-}
-
 button:focus {
   @apply outline-none;
 }
@@ -101,10 +83,6 @@ button:focus {
 @screen lg {
   .sentence > p {
     @apply text-left;
-  }
-  .logo-img {
-    max-width: 300px;
-    max-height: 300px;
   }
 }
 
