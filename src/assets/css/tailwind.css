@@ -24,3 +24,19 @@ body {
 .page-leave-active {
   opacity: 0;
 }
+
+.bg-gradient-red-to-orange {
+  background-image: linear-gradient(
+    to right,
+    theme('colors.primary.500'),
+    theme('colors.orange.500')
+  );
+}
+
+.bg-gradient-gray {
+  background-image: linear-gradient(
+    to right,
+    theme('colors.gray.800'),
+    theme('colors.gray.700')
+  );
+}

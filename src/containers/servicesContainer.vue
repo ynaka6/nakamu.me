@@ -1,20 +1,22 @@
 <template>
-  <n-contents-section />
+  <div>
+    <n-services-section />
+  </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from '@vue/composition-api'
 import { setBreadcrumbs } from '@/store/modules/breadcrumbs'
-import NContentsSection from '~/components/NContentsSection.vue'
+import NServicesSection from '~/components/NServicesSection.vue'
 
 export default defineComponent({
   components: {
-    NContentsSection
+    NServicesSection
   },
   setup() {
     setBreadcrumbs([
       { to: '/', icon: ['fas', 'fire'], color: 'text-primary-500' },
-      { to: null, name: 'Contents' }
+      { to: null, name: 'Services' }
     ])
     return {}
   }
