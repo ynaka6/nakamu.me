@@ -1,11 +1,12 @@
 <template>
   <component
     :is="tagName"
+    :type="type"
     :href="href"
     :to="to"
     :target="target"
     :rel="rel"
-    class="flex text-lg rounded-full px-8 py-2 font-bold items-center justify-center no-underline"
+    class="text-lg rounded-full px-8 py-2 font-bold no-underline"
   >
     <!-- ボタンに表示する文 -->
     {{ text }}
@@ -19,6 +20,11 @@ import { defineComponent } from '@vue/composition-api'
 export default defineComponent({
   props: {
     tagName: {
+      type: String,
+      required: false,
+      default: 'button'
+    },
+    type: {
       type: String,
       required: false,
       default: null

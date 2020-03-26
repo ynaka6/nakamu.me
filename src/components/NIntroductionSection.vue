@@ -14,12 +14,14 @@
         />
       </transition>
 
-      <div class="sentence flex flex-col">
-        <p class="font-semibold text-center text-3xl mb-2 lg:mb-5 lg:text-5xl">
+      <div class="flex flex-col">
+        <p
+          class="font-semibold text-3xl text-center mb-2 lg:mb-5 lg:text-5xl lg:text-left"
+        >
           I'm a<span class="text-primary-500">&nbsp;Web developer!!!</span>
         </p>
         <p class="text-sm lg:text-base">
-          香港在住3年目になるWEBエンジニアのなかむです。<br />
+          香港在住4年目になるWEBエンジニアのなかむです。<br />
           現在は、LaravelやRailsを利用したWEB開発を中心にエンジニアを<br
             class="inline lg:hidden"
           />しています。
@@ -32,13 +34,13 @@
           <n-round-button
             :tag-name="'nuxt-link'"
             to="/about"
-            class="more-about bg-primary-500 text-white"
+            class="shadow-primary-500 bg-primary-500 text-white hover:bg-white hover:rounded-full hover:border-primary-500 hover:text-primary-500 hover:shadow-xl"
             text="More About"
           />
           <n-round-button
             :tag-name="'nuxt-link'"
             to="/projects"
-            class="my-works mx-5 bg-white text-primary-500 border border-primary-500"
+            class="shadow-primary-500 mx-5 bg-white text-primary-500 border border-primary-500 hover:bg-primary-500 hover:border-primary-500 hover:text-white"
             text="My Works"
           />
         </div>
@@ -55,35 +57,17 @@ export default defineComponent({
     NRoundButton
   },
   setup() {
-    const tagName: string = 'button'
     return {
       transition: 'delay-appear-logo',
-      mode: 'out-in',
-      tagName
+      mode: 'out-in'
     }
   }
 })
 </script>
 
 <style scoped>
-.more-about:hover {
+.shadow-primary-500:hover {
   box-shadow: 0px 0px 5px 0px theme('colors.red.500');
-  @apply bg-white rounded-full border-primary-500 text-primary-500;
-}
-
-.my-works:hover {
-  box-shadow: 0px 0px 5px 0px theme('colors.red.500');
-  @apply bg-primary-500 rounded-full border-primary-500 text-white;
-}
-
-button:focus {
-  @apply outline-none;
-}
-
-@screen lg {
-  .sentence > p {
-    @apply text-left;
-  }
 }
 
 .delay-appear-logo-enter {
