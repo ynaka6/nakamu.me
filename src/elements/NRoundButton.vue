@@ -6,7 +6,7 @@
     :to="to"
     :target="target"
     :rel="rel"
-    class="text-lg rounded-full px-8 py-2 font-bold no-underline"
+    class="text-lg rounded-full px-6 py-2 font-bold no-underline"
   >
     <!-- ボタンに表示する文 -->
     {{ text }}
