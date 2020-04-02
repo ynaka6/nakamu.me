@@ -288,7 +288,7 @@ h2 {
   left: 20px;
 }
 
-@media screen and (max-width: 768px) {
+@screen untilLg {
   .timeline::before {
     left: 50px;
   }
