@@ -6,11 +6,6 @@
  */
 module.exports = {
   theme: {
-    screens: {
-      untilLg: { max: '1023px' },
-      md: '768px',
-      lg: '1024px'
-    },
     extend: {
       colors: {
         primary: {

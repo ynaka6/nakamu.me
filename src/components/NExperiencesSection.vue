@@ -23,162 +23,84 @@
         <!-- timeline start point -->
         <div class="p-2 lg:flex lg:flex-wrap lg:p-6" />
         <section class="timeline py-10">
-          <div class="container">
-            <!-- timeline's icon -->
-            <div class="timeline-item">
-              <div class="timeline-img" />
+          <!-- timeline's icon -->
+          <div class="timeline-item">
+            <div class="timeline-img" />
 
-              <!-- timeline's contents -->
-              <div class="timeline-content">
-                <h2>{{ cardTitle }}</h2>
-                <!-- date -->
-                <div class="date bg-gradient-gray">
-                  {{ date }}
-                </div>
-                <!-- contents -->
-                <p>
-                  contents contents contents contents contents contents contents
-                  contents contents contents contents contents contents contents
-                  contents contents contents contents contents contents contents
-                  contents contents contents
-                </p>
+            <!-- timeline's contents -->
+            <div class="timeline-content">
+              <p class="font-bold text-gray-700 text-sm px-2">
+                SHIEN株式会社
+              </p>
+              <div class="date bg-gradient-gray">
+                2015.7 ~
               </div>
+              <p class="p-2">
+                Web制作やシステム開発の受託・業務委託を中心に、各企業のIT部門を支援する会社を起業
+              </p>
             </div>
+          </div>
 
-            <div class="timeline-item">
-              <div class="timeline-img" />
+          <div class="timeline-item">
+            <div class="timeline-img" />
 
-              <div class="timeline-content timeline-card">
-                <h2>{{ cardTitle }}</h2>
-                <div class="date bg-gradient-gray">
-                  {{ date }}
-                </div>
-                <p>
-                  contents contents contents contents contents contents contents
-                  contents contents contents contents contents contents contents
-                  contents contents contents contents contents contents contents
-                  contents contents contents
-                </p>
+            <div class="timeline-content">
+              <p class="font-bold text-gray-700 text-sm px-2">
+                Asian Union Holdings Limited
+              </p>
+              <div class="date bg-gradient-gray">
+                2014.7 ~
               </div>
+              <p class="p-2">
+                日本企業向けの受託案件や自社案件のエンジニアとして開発を担当
+              </p>
             </div>
+          </div>
 
-            <div class="timeline-item">
-              <div class="timeline-img" />
+          <div class="timeline-item">
+            <div class="timeline-img" />
 
-              <div class="timeline-content">
-                <h2>{{ cardTitle }}</h2>
-                <div class="date bg-gradient-gray">
-                  {{ date }}
-                </div>
-                <p>
-                  contents contents contents contents contents contents contents
-                  contents contents contents contents contents contents contents
-                  contents contents contents contents contents contents contents
-                  contents contents contents
-                </p>
+            <div class="timeline-content">
+              <p class="font-bold text-gray-700 text-sm px-2">
+                株式会社コロプラ
+              </p>
+              <div class="date bg-gradient-gray">
+                2013.4 ~ 2014.6
               </div>
+              <p class="p-2">
+                Unityを利用したスマートフォンゲームのプログラマーとして活動
+              </p>
             </div>
+          </div>
 
-            <div class="timeline-item">
-              <div class="timeline-img" />
-
-              <div class="timeline-content">
-                <h2>{{ cardTitle }}</h2>
-                <div class="date bg-gradient-gray">
-                  {{ date }}
-                </div>
-                <p>
-                  contents contents contents contents contents contents contents
-                  contents contents contents contents contents contents contents
-                  contents contents contents contents contents contents contents
-                  contents contents contents
-                </p>
+          <div class="timeline-item">
+            <div class="timeline-img" />
+            <div class="timeline-content">
+              <p class="font-bold text-gray-700 text-sm px-2">
+                株式会社ジークレスト
+              </p>
+              <div class="date bg-gradient-gray">
+                2010.5 ~ 2013.3
               </div>
+              <p class="p-2">
+                アットゲームズをはじめとしたソーシャルゲームの運用開発のエンジニア・プログラマーとして活動。
+              </p>
             </div>
+          </div>
 
-            <div class="timeline-item">
-              <div class="timeline-img" />
-
-              <div class="timeline-content timeline-card">
-                <h2>{{ cardTitle }}</h2>
-                <div class="date bg-gradient-gray">
-                  {{ date }}
-                </div>
-                <p>
-                  contents contents contents contents contents contents contents
-                  contents contents contents contents contents contents contents
-                  contents contents contents contents contents contents contents
-                  contents contents contents
-                </p>
+          <div class="timeline-item">
+            <div class="timeline-img" />
+            <div class="timeline-content">
+              <p class="font-bold text-gray-700 text-sm px-2">
+                ピセ株式会社
+              </p>
+              <div class="date bg-gradient-gray">
+                2007.4 ~ 2010.4
               </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-img" />
-
-              <div class="timeline-content timeline-card">
-                <h2>{{ cardTitle }}</h2>
-                <div class="date bg-gradient-gray">
-                  {{ date }}
-                </div>
-                <p>
-                  contents contents contents contents contents contents contents
-                  contents contents contents contents contents contents contents
-                  contents contents contents contents contents contents contents
-                  contents contents contents
-                </p>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-img" />
-
-              <div class="timeline-content">
-                <h2>{{ cardTitle }}</h2>
-                <div class="date bg-gradient-gray">
-                  {{ date }}
-                </div>
-                <p>
-                  contents contents contents contents contents contents contents
-                  contents contents contents contents contents contents contents
-                  contents contents contents contents contents contents contents
-                  contents contents contents
-                </p>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-img" />
-
-              <div class="timeline-content timeline-card">
-                <h2>{{ cardTitle }}</h2>
-                <div class="date bg-gradient-gray">
-                  {{ date }}
-                </div>
-                <p>
-                  contents contents contents contents contents contents contents
-                  contents contents contents contents contents contents contents
-                  contents contents contents contents contents contents contents
-                  contents contents contents
-                </p>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-img" />
-
-              <div class="timeline-content">
-                <div class="date bg-gradient-gray">
-                  {{ date }}
-                </div>
-                <h2>{{ cardTitle }}</h2>
-                <p>
-                  contents contents contents contents contents contents contents
-                  contents contents contents contents contents contents contents
-                  contents contents contents contents contents contents contents
-                  contents contents contents
-                </p>
-              </div>
+              <p class="p-2">
+                未経験からSIer企業のプログラマーとしての活動。
+                半年の研修後、ケーブルテレビの帳票システムや医療関連の臨床情報入力システムの開発など受託の新規案件を行いました。
+              </p>
             </div>
           </div>
         </section>
@@ -197,12 +119,8 @@ export default defineComponent({
   },
   setup() {
     const title: string = 'Projects and Works'
-    const cardTitle: string = 'title'
-    const date: string = 'Day Month Year'
     return {
-      title,
-      cardTitle,
-      date
+      title
     }
   }
 })
@@ -218,7 +136,7 @@ export default defineComponent({
   content: '';
   width: 5px;
   height: 95%;
-  left: 50%;
+  left: 50px;
   transform: translateX(-50%);
   background-image: linear-gradient(
     to right,
@@ -229,11 +147,6 @@ export default defineComponent({
 
 .timeline-item {
   @apply w-full mb-10;
-}
-
-.timeline-item:nth-child(even) > .timeline-content {
-  @apply float-right;
-  padding: 50px 0 0 0;
 }
 
 .date {
@@ -251,30 +164,47 @@ export default defineComponent({
 }
 
 .timeline-content {
-  @apply relative shadow-lg;
-  width: 45%;
+  @apply relative shadow-lg max-w-full w-auto bg-white;
   padding: 50px 0 0 0;
   border-radius: 4px;
-  background: #f5f5f5;
+  margin-left: 80px;
+}
+
+.timeline-content::after {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  width: 0;
+  height: 0;
+  top: 30px;
+  right: -15px;
+  border-width: 10px 0 10px 15px;
+  border-color: transparent transparent transparent #fff;
+}
+
+.timeline-item:nth-child(even) > .timeline-content {
+  @aply float-none;
+}
+
+.timeline-item:nth-child(even) > .timeline-content:after {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  width: 0;
+  height: 0;
+  top: 30px;
+  left: -15px;
+  border-width: 10px 15px 10px 0;
+  border-color: transparent #fff transparent transparent;
 }
 
 .timeline-img {
-  @apply absolute rounded-full;
-  background-color: #ff5f5f;
+  @apply absolute rounded-full bg-primary-500;
   width: 30px;
   height: 30px;
-  left: 50%;
+  left: 50px;
   margin-top: 25px;
   margin-left: -15px;
-}
-
-h2 {
-  @apply font-bold;
-  font-size: 1.5rem;
-}
-
-.timeline-card {
-  padding: 50px 0 0 0 !important;
 }
 
 .timeline-img-header {
@@ -283,27 +213,20 @@ h2 {
   margin-bottom: 20px;
 }
 
-.timeline-img-header > h2 {
-  bottom: 5px;
-  left: 20px;
-}
-
-@screen untilLg {
+@screen lg {
   .timeline::before {
-    left: 50px;
+    left: 50%;
   }
-
-  .timeline-img {
-    left: 50px;
-  }
-
   .timeline-content {
-    @apply max-w-full w-auto;
-    margin-left: 80px;
+    width: 45%;
+    margin-left: 0;
   }
-
   .timeline-item:nth-child(even) > .timeline-content {
-    @apply float-none;
+    @apply float-right;
+    padding: 50px 0 0 0;
+  }
+  .timeline-img {
+    left: 50%;
   }
 }
 </style>
