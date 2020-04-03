@@ -118,12 +118,15 @@ export default {
       }
     }
   },
+  purgeCSS: {
+    whitelistPatterns: [/(^|\.)fa-/, /-fa($|\.)/, /(^|\.)page-/]
+  },
   generate: {
     routes: [
       '/about',
       '/projects',
       '/experiences',
-      '/contents',
+      '/services',
       '/contact',
       '/contact/thanks'
     ]

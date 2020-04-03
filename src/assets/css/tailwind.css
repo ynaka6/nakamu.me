@@ -16,10 +16,12 @@ body {
   font-family: 'Quicksand', sans-serif;
 }
 
+/* purcecss start ignore */
 .page-enter-active,
 .page-leave-active {
   transition: opacity 0.5s;
 }
+/* purcecss end ignore */
 .page-enter,
 .page-leave-active {
   opacity: 0;
