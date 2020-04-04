@@ -37,7 +37,7 @@ body {
   background-image: linear-gradient(
     to right,
     theme('colors.gray.800'),
-    theme('colors.gray.700')
+    theme('colors.gray.600')
   );
 }
 

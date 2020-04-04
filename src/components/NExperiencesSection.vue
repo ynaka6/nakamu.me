@@ -23,12 +23,30 @@
         <!-- timeline start point -->
         <div class="p-2 lg:flex lg:flex-wrap lg:p-6" />
         <section class="timeline py-10">
-          <!-- timeline's icon -->
           <div class="timeline-item">
             <div class="timeline-img" />
-
-            <!-- timeline's contents -->
             <div class="timeline-content">
+              <img
+                src="~/assets/images/work_experiences/growhub.com.hk.png"
+                class="w-full mb-2"
+                alt="Growhub Limited"
+              />
+              <p class="font-bold text-gray-700 text-sm px-2">
+                Growhub Limited
+              </p>
+              <div class="date bg-gradient-gray">
+                2019.4 ~
+              </div>
+              <p class="p-2">
+                香港を拠点とし、Webサービスの開発とコンサルティング、教育を行う会社
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-img" />
+            <div class="timeline-content">
+              <div class="py-6" />
               <p class="font-bold text-gray-700 text-sm px-2">
                 SHIEN株式会社
               </p>
@@ -45,6 +63,11 @@
             <div class="timeline-img" />
 
             <div class="timeline-content">
+              <img
+                src="~/assets/images/work_experiences/auhl.com.hk.png"
+                class="w-full mb-2"
+                alt="Asian Union Holdings Limited"
+              />
               <p class="font-bold text-gray-700 text-sm px-2">
                 Asian Union Holdings Limited
               </p>
@@ -59,8 +82,12 @@
 
           <div class="timeline-item">
             <div class="timeline-img" />
-
             <div class="timeline-content">
+              <img
+                src="~/assets/images/work_experiences/colopl.co.jp.png"
+                class="w-full mb-2"
+                alt="株式会社コロプラ"
+              />
               <p class="font-bold text-gray-700 text-sm px-2">
                 株式会社コロプラ
               </p>
@@ -76,6 +103,11 @@
           <div class="timeline-item">
             <div class="timeline-img" />
             <div class="timeline-content">
+              <img
+                src="~/assets/images/work_experiences/www.gcrest.com.png"
+                class="w-full mb-2"
+                alt="株式会社ジークレスト"
+              />
               <p class="font-bold text-gray-700 text-sm px-2">
                 株式会社ジークレスト
               </p>
@@ -91,6 +123,11 @@
           <div class="timeline-item">
             <div class="timeline-img" />
             <div class="timeline-content">
+              <img
+                src="~/assets/images/work_experiences/www.pise.co.jp.png"
+                class="w-full mb-2"
+                alt="ピセ株式会社"
+              />
               <p class="font-bold text-gray-700 text-sm px-2">
                 ピセ株式会社
               </p>
@@ -165,7 +202,6 @@ export default defineComponent({
 
 .timeline-content {
   @apply relative shadow-lg max-w-full w-auto bg-white;
-  padding: 50px 0 0 0;
   border-radius: 4px;
   margin-left: 80px;
 }
@@ -223,7 +259,6 @@ export default defineComponent({
   }
   .timeline-item:nth-child(even) > .timeline-content {
     @apply float-right;
-    padding: 50px 0 0 0;
   }
   .timeline-img {
     left: 50%;
