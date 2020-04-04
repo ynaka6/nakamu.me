@@ -19,8 +19,11 @@
             >
               <input type="hidden" name="form-name" value="contact" />
               <div class="px-1 mb-2 text-center">
-                <label for="name" class="block mt-6 mb-2 font-semibold">
-                  お名前<span class="ml-2 must">*</span>
+                <label
+                  for="name"
+                  class="required block mt-6 mb-2 font-semibold"
+                >
+                  お名前
                 </label>
                 <validation-provider
                   v-slot="{ errors }"
@@ -42,8 +45,11 @@
               </div>
 
               <div class="px-1 mb-2 text-center">
-                <label for="email" class="block mt-6 mb-2 font-semibold">
-                  メールアドレス<span class="ml-2 must">*</span>
+                <label
+                  for="email"
+                  class="required block mt-6 mb-2 font-semibold"
+                >
+                  メールアドレス
                 </label>
                 <validation-provider
                   v-slot="{ errors }"
@@ -65,8 +71,11 @@
               </div>
 
               <div class="px-1 mb-2 text-center">
-                <label for="content" class="block mt-6 mb-2 font-semibold">
-                  お問い合わせ内容<span class="ml-2 must">*</span>
+                <label
+                  for="content"
+                  class="required block mt-6 mb-2 font-semibold"
+                >
+                  お問い合わせ内容
                 </label>
                 <validation-provider
                   v-slot="{ errors }"
@@ -88,7 +97,7 @@
                 </validation-provider>
               </div>
               <validation-provider>
-                <div class="px-1 mb-2 text-center">
+                <div class="max-w-md mx-auto px-1 mb-2">
                   <button
                     type="submit"
                     :class="{ buttonInActive: invalid }"
@@ -145,28 +154,12 @@ export default defineComponent({
   @apply text-center;
 }
 
-.must {
-  @apply text-primary-500;
-}
-
 *:focus {
   @apply outline-none;
 }
 
 .buttonInActive {
   @apply mx-auto w-full py-5 px-2 rounded-full mt-10 text-white bg-primary-200 font-bold uppercase pointer-events-none;
-}
-
-@screen md {
-  .buttonInActive {
-    @apply w-2/5;
-  }
-}
-
-@screen lg {
-  .buttonInActive {
-    @apply px-4;
-  }
 }
 
 .sendBtn:hover {

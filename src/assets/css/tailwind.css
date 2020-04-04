@@ -40,3 +40,8 @@ body {
     theme('colors.gray.700')
   );
 }
+
+label.required::after {
+  content: '*';
+  @apply text-primary-500;
+}
