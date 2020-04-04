@@ -99,7 +99,8 @@ export default {
     postcss: {
       plugins: {
         'postcss-for': {},
-        'postcss-calc': {}
+        'postcss-calc': {},
+        'postcss-nesting': {},
       }
     },
 

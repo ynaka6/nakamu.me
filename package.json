@@ -30,6 +30,7 @@
     "nuxt": "^2.0.0",
     "postcss-calc": "^7.0.2",
     "postcss-for": "^2.1.1",
+    "postcss-nesting": "^7.0.1",
     "sass-loader": "^8.0.2",
     "vee-validate": "^3.2.5",
     "vue-scrollto": "^2.17.1"
