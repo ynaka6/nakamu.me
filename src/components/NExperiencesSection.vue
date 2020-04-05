@@ -163,105 +163,109 @@ export default defineComponent({
 })
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 .timeline {
   @apply relative;
-}
 
-.timeline::before {
-  @apply absolute;
-  content: '';
-  width: 5px;
-  height: 95%;
-  left: 50px;
-  transform: translateX(-50%);
-  background-image: linear-gradient(
-    to right,
-    theme('colors.gray.800'),
-    theme('colors.gray.700')
-  );
-}
+  &::before {
+    @apply absolute;
+    content: '';
+    width: 5px;
+    height: 95%;
+    left: 25px;
+    transform: translateX(-50%);
+    background-image: linear-gradient(
+      to right,
+      theme('colors.gray.800'),
+      theme('colors.gray.700')
+    );
+  }
 
-.timeline-item {
-  @apply w-full mb-10;
-}
+  & > .timeline-item {
+    @apply w-full mb-10;
 
-.date {
-  @apply inline-block absolute top-0 right-0 text-white;
-  padding: 10px;
-}
+    &::after {
+      @apply block clear-both;
+      content: '';
+    }
 
-.timeline-item:nth-child(even) > .timeline-content > .date {
-  @apply right-auto left-0;
-}
+    &:nth-child(even) {
+      & > .timeline-content {
+        @apply float-none;
 
-.timeline-item::after {
-  @apply block clear-both;
-  content: '';
-}
+        & > .date {
+          @apply right-auto left-0;
+        }
+      }
+    }
 
-.timeline-content {
-  @apply relative shadow-lg max-w-full w-auto bg-white;
-  border-radius: 4px;
-  margin-left: 80px;
-}
+    & > .timeline-img {
+      @apply absolute rounded-full bg-primary-500;
+      width: 30px;
+      height: 30px;
+      left: 25px;
+      margin-top: 25px;
+      margin-left: -15px;
+    }
 
-.timeline-content::after {
-  content: '';
-  position: absolute;
-  border-style: solid;
-  width: 0;
-  height: 0;
-  top: 30px;
-  right: -15px;
-  border-width: 10px 0 10px 15px;
-  border-color: transparent transparent transparent #fff;
-}
+    & > .timeline-content {
+      @apply relative shadow-lg max-w-full w-auto bg-white;
+      border-radius: 4px;
+      margin-left: 60px;
 
-.timeline-item:nth-child(even) > .timeline-content {
-  @aply float-none;
-}
+      &::after {
+        content: '';
+        position: absolute;
+        border-style: solid;
+        width: 0;
+        height: 0;
+        top: 30px;
+        left: -15px;
+        border-width: 10px 15px 10px 0;
+        border-color: transparent #fff transparent transparent;
+      }
+    }
 
-.timeline-item:nth-child(even) > .timeline-content:after {
-  content: '';
-  position: absolute;
-  border-style: solid;
-  width: 0;
-  height: 0;
-  top: 30px;
-  left: -15px;
-  border-width: 10px 15px 10px 0;
-  border-color: transparent #fff transparent transparent;
-}
-
-.timeline-img {
-  @apply absolute rounded-full bg-primary-500;
-  width: 30px;
-  height: 30px;
-  left: 50px;
-  margin-top: 25px;
-  margin-left: -15px;
-}
-
-.timeline-img-header {
-  @apply relative;
-  height: 200px;
-  margin-bottom: 20px;
+    & .date {
+      @apply inline-block absolute top-0 right-0 text-white;
+      padding: 10px;
+    }
+  }
 }
 
 @screen lg {
-  .timeline::before {
-    left: 50%;
-  }
-  .timeline-content {
-    width: 45%;
-    margin-left: 0;
-  }
-  .timeline-item:nth-child(even) > .timeline-content {
-    @apply float-right;
-  }
-  .timeline-img {
-    left: 50%;
+  .timeline {
+    &::before {
+      left: 50%;
+    }
+
+    & > .timeline-item {
+      &:nth-child(even) {
+        & > .timeline-content {
+          @apply float-right;
+
+          &::after {
+            left: -15px;
+            border-width: 10px 15px 10px 0;
+            border-color: transparent #fff transparent transparent;
+          }
+        }
+      }
+      & > .timeline-img {
+        left: 50%;
+      }
+      & > .timeline-content {
+        width: 45%;
+        margin-left: 0;
+
+        &::after {
+          right: -15px;
+          left: auto;
+          border-width: 10px 0 10px 15px;
+          border-color: transparent transparent transparent #fff;
+        }
+      }
+    }
   }
 }
 </style>
