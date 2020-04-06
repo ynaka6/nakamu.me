@@ -34,13 +34,13 @@
           <n-round-button
             :tag-name="'nuxt-link'"
             to="/about"
-            class="shadow-primary-500 bg-primary-500 text-white hover:bg-white hover:rounded-full hover:border-primary-500 hover:text-primary-500 hover:shadow-xl"
-            text="More About"
+            class="shadow-primary-500 bg-gradient-red-to-orange text-white hover:opacity-75 hover:border-primary-500 hover:shadow-xl"
+            text="About Me"
           />
           <n-round-button
             :tag-name="'nuxt-link'"
             to="/projects"
-            class="shadow-primary-500 mx-5 bg-white text-primary-500 border border-primary-500 hover:bg-primary-500 hover:border-primary-500 hover:text-white"
+            class="shadow-primary-500 mx-5 bg-white text-primary-500 border border-primary-500 hover:opacity-75"
             text="My Works"
           />
         </div>

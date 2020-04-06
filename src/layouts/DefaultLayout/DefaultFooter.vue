@@ -1,7 +1,7 @@
 <template>
   <footer>
     <div v-if="state.scrollY > 100" class="flex justify-center my-2">
-      <nuxt-link v-scroll-to="'body'" to class="text-center">
+      <nuxt-link v-scroll-to="'body'" to class="text-gray-800 text-center">
         <font-awesome-icon icon="chevron-up" size="lg" />
         <div class="text-xs text-gray-800">
           画面上部に戻る

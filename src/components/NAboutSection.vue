@@ -17,7 +17,7 @@
             <a
               href="https://www.php.net/"
               target="_blank"
-              class="font-semibold text-blue-500 hover:underline"
+              rel="noopener noreferrer"
             >
               PHP
             </a>
@@ -25,7 +25,7 @@
             <a
               href="https://laravel.com/"
               target="_blank"
-              class="font-semibold text-blue-500 hover:underline"
+              rel="noopener noreferrer"
             >
               Laravel
             </a>
@@ -33,7 +33,7 @@
             <a
               href="https://jp.vuejs.org/"
               target="_blank"
-              class="font-semibold text-blue-500 hover:underline"
+              rel="noopener noreferrer"
             >
               Vue.js
             </a>
@@ -95,6 +95,26 @@
             </div>
           </div>
           <n-title title="Place" tag-name="h3" class="mt-6 mb-2" />
+          <p class="text-gray-800 mb-6">
+            I live in Hong Kong 🇭🇰<br />
+            香港の景色や情報に興味がある方は、
+            <a
+              href="https://enjoyhk.nakamu.life/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              香港ブログ
+            </a>
+            や
+            <a
+              href="https://www.instagram.com/____nakamu____/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Instagram - @___nakamu___
+            </a>
+            を見てください。
+          </p>
           <div class="w-full">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9974.978817521534!2d114.25061418895562!3d22.30274317169678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x340403ef722d58c5%3A0x1ce2bbdb749d890c!2sTiu%20Keng%20Leng%20Station!5e0!3m2!1sja!2shk!4v1584431827753!5m2!1sja!2shk"
