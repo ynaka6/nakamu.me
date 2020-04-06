@@ -13,6 +13,11 @@ a {
   @apply text-blue-600;
 }
 
+label.required::after {
+  content: '*';
+  @apply text-primary-500;
+}
+
 .font-leckerli-one {
   font-family: 'Leckerli One', cursive;
 }
@@ -45,7 +50,6 @@ a {
   );
 }
 
-label.required::after {
-  content: '*';
-  @apply text-primary-500;
+.box-shadow-red {
+  box-shadow: 0px 0px 5px 0px theme('colors.red.500');
 }

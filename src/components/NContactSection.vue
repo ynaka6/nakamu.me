@@ -100,8 +100,11 @@
                 <div class="max-w-md mx-auto px-1 mb-2">
                   <button
                     type="submit"
-                    :class="{ buttonInActive: invalid }"
-                    class="sendBtn mx-auto w-full py-5 px-2 rounded-full mt-10 text-white bg-primary-500 font-bold uppercase lg:px-4 md:w-2/5"
+                    class="mx-auto w-full py-5 px-2 rounded-full mt-10 font-bold"
+                    :class="{
+                      'text-white bg-primary-200 cursor-not-allowed': invalid,
+                      'text-white bg-primary-500 cursor-pointer hover:opacity-75 hover:shadow-2xl': !invalid
+                    }"
                     :disabled="invalid"
                   >
                     <font-awesome-icon
@@ -145,7 +148,7 @@ export default defineComponent({
 </script>
 
 <style scoped>
-:focus {
+input:focus {
   box-shadow: 0px 0px 5px 0px theme('colors.red.500');
   @apply bg-white border border-primary-500;
 }
@@ -156,14 +159,5 @@ export default defineComponent({
 
 *:focus {
   @apply outline-none;
-}
-
-.buttonInActive {
-  @apply mx-auto w-full py-5 px-2 rounded-full mt-10 text-white bg-primary-200 font-bold uppercase pointer-events-none;
-}
-
-.sendBtn:hover {
-  box-shadow: 0px 0px 5px 0px theme('colors.red.500');
-  @apply bg-white rounded-full border-primary-500 text-primary-500;
 }
 </style>
