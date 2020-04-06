@@ -23,7 +23,14 @@
         <div class="p-2 lg:flex lg:flex-wrap lg:p-6">
           <div class="mb-6 lg:w-1/2 lg:px-2">
             <n-browser-window>
-              <img src="~/assets/images/projects/growhub.com.hk.png" />
+              <div class="relative">
+                <span
+                  class="absolute top-0 right-0 bg-gradient-red-to-orange px-4 py-1 mt-1 mr-1 rounded-full font-semibold text-white text-xs"
+                >
+                  Business
+                </span>
+                <img src="~/assets/images/projects/growhub.com.hk.png" />
+              </div>
             </n-browser-window>
             <div class="text-center mt-4">
               <a
@@ -46,7 +53,14 @@
           </div>
           <div class="mb-6 lg:w-1/2 lg:px-2">
             <n-browser-window>
-              <img src="~/assets/images/projects/mentor.growhub.com.hk.png" />
+              <div class="relative">
+                <span
+                  class="absolute top-0 right-0 bg-gradient-red-to-orange px-4 py-1 mt-1 mr-1 rounded-full font-semibold text-white text-xs"
+                >
+                  Business
+                </span>
+                <img src="~/assets/images/projects/mentor.growhub.com.hk.png" />
+              </div>
             </n-browser-window>
             <div class="text-center mt-4">
               <a
@@ -65,6 +79,67 @@
                 <n-tag text="Netlify" class="mr-1" />
                 <n-tag text="Tailwind CSS" class="mr-1" />
                 <n-tag text="Stripe" />
+              </div>
+            </div>
+          </div>
+          <div class="mb-6 lg:w-1/2 lg:px-2">
+            <n-browser-window>
+              <div class="relative">
+                <span
+                  class="absolute top-0 right-0 bg-gradient-red-to-orange px-4 py-1 mt-1 mr-1 rounded-full font-semibold text-white text-xs"
+                >
+                  Personal
+                </span>
+                <img src="~/assets/images/projects/blog.nakamu.life.png" />
+              </div>
+            </n-browser-window>
+            <div class="text-center mt-4">
+              <a
+                href="https://blog.nakamu.life/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-xl text-gray-800 underline"
+              >
+                blog.nakamu.life
+              </a>
+              <p class="text-xs mt-4">
+                エンジニアとして培ったノウハウをまとめた雑記ブログ
+              </p>
+              <div class="mt-2">
+                <n-tag text="Nuxt.js" class="mr-1" />
+                <n-tag text="Netlify" class="mr-1" />
+                <n-tag text="Contentful" class="mr-1" />
+                <n-tag text="Tailwind CSS" />
+              </div>
+            </div>
+          </div>
+          <div class="mb-6 lg:w-1/2 lg:px-2">
+            <n-browser-window>
+              <div class="relative">
+                <span
+                  class="absolute top-0 right-0 bg-gradient-red-to-orange px-4 py-1 mt-1 mr-1 rounded-full font-semibold text-white text-xs"
+                >
+                  Personal
+                </span>
+                <img src="~/assets/images/projects/enjoyhk.nakamu.life.png" />
+              </div>
+            </n-browser-window>
+            <div class="text-center mt-4">
+              <a
+                href="https://enjoyhk.nakamu.life/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-xl text-gray-800 underline"
+              >
+                enjoyhk.nakamu.life
+              </a>
+              <p class="text-xs mt-4">
+                香港生活を綴った雑記ブログ
+              </p>
+              <div class="mt-2">
+                <n-tag text="Gatsby" class="mr-1" />
+                <n-tag text="Netlify" class="mr-1" />
+                <n-tag text="Tailwind CSS" />
               </div>
             </div>
           </div>
