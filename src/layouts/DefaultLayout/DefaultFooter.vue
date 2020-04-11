@@ -65,7 +65,7 @@ export default defineComponent({
       state.scrollY = window.scrollY
     }
 
-    const toggleModel = (mode) => {
+    const toggleModel = (mode: string) => {
       if (mode === 'dark') {
         document.body.classList.add('dark')
         document.body.classList.remove('light')
