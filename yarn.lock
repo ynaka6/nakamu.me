@@ -10679,7 +10679,8 @@ terser-webpack-plugin@^2.3.5:
 terser@^4.1.2, terser@^4.3.9, terser@^4.4.3:
   version "4.6.11"
   resolved "https://registry.yarnpkg.com/terser/-/terser-4.6.11.tgz#12ff99fdd62a26de2a82f508515407eb6ccd8a9f"
-  dependencies:
+
+dependencies:
     commander "^2.20.0"
     source-map "~0.6.1"
     source-map-support "~0.5.12"
