@@ -13,7 +13,7 @@ export default defineComponent({
   },
   setup() {
     setBreadcrumbs([
-      { to: '/', icon: ['fas', 'fire'], color: 'text-primary-500' },
+      { to: '/', icon: ['fas', 'fire'], color: 'text-bland-500' },
       { to: null, name: 'Work Experience' }
     ])
     return {}

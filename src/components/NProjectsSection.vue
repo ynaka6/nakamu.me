@@ -3,13 +3,13 @@
     <div class="flex justify-center">
       <div class="w-full px-2 lg:px-0 lg:w-4/5">
         <n-title :title="title" class="text-center mb-1" />
-        <p class="text-center text-sm text-gray-700 mb-4">
+        <p class="text-center text-sm text-secondary mb-4">
           今までの経歴や開発実績・製作物を紹介します
         </p>
         <div class="flex justify-center items-center">
           <nuxt-link
             to="/projects"
-            class="w-40 shadow border border-primary-500 font-bold text-center text-primary-500 text-xs py-1 px-4 mr-2 lg:w-56 lg:text-base lg:mr-4"
+            class="w-40 shadow bg-white border border-bland-500 font-bold text-center text-bland-500 text-xs py-1 px-4 mr-2 lg:w-56 lg:text-base lg:mr-4"
           >
             Projects
           </nuxt-link>
@@ -37,7 +37,7 @@
                 href="https://growhub.com.hk/"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="text-xl text-gray-800 underline"
+                class="text-xl text-primary underline"
               >
                 growhub.com.hk
               </a>
@@ -67,7 +67,7 @@
                 href="https://mentor.growhub.com.hk/"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="text-xl text-gray-800 underline"
+                class="text-xl text-primary underline"
               >
                 mentor.growhub.com.hk
               </a>
@@ -98,7 +98,7 @@
                 href="https://blog.nakamu.life/"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="text-xl text-gray-800 underline"
+                class="text-xl text-primary underline"
               >
                 blog.nakamu.life
               </a>
@@ -129,7 +129,7 @@
                 href="https://enjoyhk.nakamu.life/"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="text-xl text-gray-800 underline"
+                class="text-xl text-primary underline"
               >
                 enjoyhk.nakamu.life
               </a>
@@ -162,7 +162,7 @@
               <n-round-button
                 :tag-name="'nuxt-link'"
                 to="/contact"
-                class="shadow-primary-500 bg-primary-500 text-sm text-white px-10 hover:bg-white hover:bg-primary-600 hover:shadow-xl"
+                class="shadow-primary-500 bg-bland-500 text-sm text-white px-10 hover:bg-white hover:bg-bland-600 hover:shadow-xl"
               >
                 <font-awesome-icon :icon="['fas', 'envelope']" class="mr-2" />
                 お問い合わせ

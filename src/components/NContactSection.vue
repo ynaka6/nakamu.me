@@ -3,7 +3,7 @@
     <div class="flex justify-center">
       <div class="w-full lg:w-3/5">
         <n-title :title="title" class="text-center mb-1" />
-        <p class="text-center text-sm text-gray-700 mb-4">
+        <p class="text-center text-sm text-secondary mb-4">
           開発・メンター依頼受付中！一緒にプログラミングを！！
         </p>
         <client-only>
@@ -21,7 +21,7 @@
               <div class="px-1 mb-2 text-center">
                 <label
                   for="name"
-                  class="required block mt-6 mb-2 font-semibold"
+                  class="required block mt-6 mb-2 font-semibold text-gray-800"
                 >
                   お名前
                 </label>
@@ -35,7 +35,7 @@
                     v-model="name"
                     type="text"
                     name="name"
-                    class="w-full bg-gray-100 border border-primary-500 rounded-full p-4 text-gray-800"
+                    class="w-full bg-gray-100 border border-bland-500 rounded-full p-4 text-gray-800"
                     placeholder="山田 太郎"
                   />
                   <span class="block mt-2 text-red-700 font-bold">
@@ -47,7 +47,7 @@
               <div class="px-1 mb-2 text-center">
                 <label
                   for="email"
-                  class="required block mt-6 mb-2 font-semibold"
+                  class="required block mt-6 mb-2 font-semibold text-gray-800"
                 >
                   メールアドレス
                 </label>
@@ -61,7 +61,7 @@
                     v-model="email"
                     type="email"
                     name="email"
-                    class="w-full bg-gray-100 border border-primary-500 rounded-full p-4 text-gray-800"
+                    class="w-full bg-gray-100 border border-bland-500 rounded-full p-4 text-gray-800"
                     placeholder="yamada@example.com"
                   />
                   <span class="block mt-2 text-red-700 font-bold">
@@ -73,7 +73,7 @@
               <div class="px-1 mb-2 text-center">
                 <label
                   for="content"
-                  class="required block mt-6 mb-2 font-semibold"
+                  class="required block mt-6 mb-2 font-semibold text-gray-800"
                 >
                   お問い合わせ内容
                 </label>
@@ -86,7 +86,7 @@
                     id="content"
                     v-model="content"
                     name="content"
-                    class="w-full bg-gray-100 border border-primary-500 rounded-full rounded-lg p-4 text-gray-800"
+                    class="w-full bg-gray-100 border border-bland-500 rounded-full rounded-lg p-4 text-gray-800"
                     col="4"
                     row="10"
                     placeholder=""
@@ -102,8 +102,8 @@
                     type="submit"
                     class="mx-auto w-full py-5 px-2 rounded-full mt-10 font-bold"
                     :class="{
-                      'text-white bg-primary-200 cursor-not-allowed': invalid,
-                      'text-white bg-primary-500 cursor-pointer hover:opacity-75 hover:shadow-2xl': !invalid
+                      'text-white bg-bland-200 cursor-not-allowed': invalid,
+                      'text-white bg-bland-500 cursor-pointer hover:opacity-75 hover:shadow-2xl': !invalid
                     }"
                     :disabled="invalid"
                   >
@@ -150,7 +150,7 @@ export default defineComponent({
 <style scoped>
 input:focus {
   box-shadow: 0px 0px 5px 0px theme('colors.red.500');
-  @apply bg-white border border-primary-500;
+  @apply bg-white border border-bland-500;
 }
 
 ::placeholder {

@@ -25,9 +25,6 @@ export default defineComponent({
   },
   setup() {
     provideBreadcrumbs()
-    return {
-      title: 'title'
-    }
   }
 })
 </script>

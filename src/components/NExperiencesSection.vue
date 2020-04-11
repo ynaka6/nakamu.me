@@ -3,7 +3,7 @@
     <div class="flex justify-center">
       <div class="w-full px-2 lg:px-0 lg:w-4/5">
         <n-title :title="title" class="text-center mb-1" />
-        <p class="text-center text-sm text-gray-700 mb-4">
+        <p class="text-center text-sm text-secondary mb-4">
           今までの経歴や開発実績・製作物を紹介します
         </p>
         <div class="flex justify-center items-center">
@@ -15,7 +15,7 @@
           </nuxt-link>
           <nuxt-link
             to="/experiences"
-            class="w-40 shadow border border-primary-500 font-bold text-center text-primary-500 text-xs py-1 px-4 lg:w-56 lg:text-base"
+            class="w-40 shadow bg-white border border-bland-500 font-bold text-center text-bland-500 text-xs py-1 px-4 lg:w-56 lg:text-base"
           >
             Work Experience
           </nuxt-link>
@@ -37,7 +37,7 @@
               <div class="date bg-gradient-gray">
                 2019.4 ~
               </div>
-              <p class="p-2">
+              <p class="p-2 text-gray-900">
                 香港を拠点とし、Webサービスの開発とコンサルティング、教育を行う会社
               </p>
             </div>
@@ -53,7 +53,7 @@
               <div class="date bg-gradient-gray">
                 2015.7 ~
               </div>
-              <p class="p-2">
+              <p class="p-2 text-gray-900">
                 Web制作やシステム開発の受託・業務委託を中心に、各企業のIT部門を支援する会社を起業
               </p>
             </div>
@@ -74,7 +74,7 @@
               <div class="date bg-gradient-gray">
                 2014.7 ~
               </div>
-              <p class="p-2">
+              <p class="p-2 text-gray-900">
                 日本企業向けの受託案件や自社案件のエンジニアとして開発を担当
               </p>
             </div>
@@ -94,7 +94,7 @@
               <div class="date bg-gradient-gray">
                 2013.4 ~ 2014.6
               </div>
-              <p class="p-2">
+              <p class="p-2 text-gray-900">
                 Unityを利用したスマートフォンゲームのプログラマーとして活動
               </p>
             </div>
@@ -114,7 +114,7 @@
               <div class="date bg-gradient-gray">
                 2010.5 ~ 2013.3
               </div>
-              <p class="p-2">
+              <p class="p-2 text-gray-900">
                 アットゲームズをはじめとしたソーシャルゲームの運用開発のエンジニア・プログラマーとして活動。
               </p>
             </div>
@@ -134,7 +134,7 @@
               <div class="date bg-gradient-gray">
                 2007.4 ~ 2010.4
               </div>
-              <p class="p-2">
+              <p class="p-2 text-gray-900">
                 未経験からSIer企業のプログラマーとしての活動。
                 半年の研修後、ケーブルテレビの帳票システムや医療関連の臨床情報入力システムの開発など受託の新規案件を行いました。
               </p>
@@ -176,8 +176,8 @@ export default defineComponent({
     transform: translateX(-50%);
     background-image: linear-gradient(
       to right,
-      theme('colors.gray.800'),
-      theme('colors.gray.700')
+      theme('colors.bland.700'),
+      theme('colors.bland.500')
     );
   }
 
@@ -200,7 +200,7 @@ export default defineComponent({
     }
 
     & > .timeline-img {
-      @apply absolute rounded-full bg-primary-500;
+      @apply absolute rounded-full bg-bland-500;
       width: 30px;
       height: 30px;
       left: 25px;

@@ -101,6 +101,7 @@ export default {
         'postcss-for': {},
         'postcss-calc': {},
         'postcss-nesting': {},
+        'postcss-preset-env': { stage: 3 }
       }
     },
 

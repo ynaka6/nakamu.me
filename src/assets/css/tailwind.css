@@ -6,7 +6,23 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
 
 body {
-  @apply bg-gray-100;
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+}
+
+
+body.dark {
+  --color-bg: theme('colors.gray.800');
+  --color-text-primary: theme('colors.white');
+  --color-text-secondary: theme('colors.gray.400');
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    --color-bg: theme('colors.gray.100');
+    --color-text-primary: theme('colors.gray.800');
+    --color-text-secondary: theme('colors.gray.600');
+  }
 }
 
 a {
@@ -15,7 +31,7 @@ a {
 
 label.required::after {
   content: '*';
-  @apply text-primary-500;
+  @apply text-bland-500;
 }
 
 .font-leckerli-one {
@@ -34,10 +50,19 @@ label.required::after {
   opacity: 0;
 }
 
+.text-primary {
+  color: var(--color-text-primary);
+}
+
+.text-secondary {
+  color: var(--color-text-secondary);
+}
+
+
 .bg-gradient-red-to-orange {
   background-image: linear-gradient(
     to right,
-    theme('colors.primary.500'),
+    theme('colors.bland.500'),
     theme('colors.orange.500')
   );
 }

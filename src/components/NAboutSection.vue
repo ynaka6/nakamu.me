@@ -3,10 +3,10 @@
     <div class="flex justify-center">
       <div class="w-full lg:w-3/5">
         <n-title :title="title" class="text-center mb-1" />
-        <p class="text-center text-sm text-gray-700 mb-4">
+        <p class="text-center text-sm text-secondary mb-4">
           プログラマーとして色々な業界を転々とする私について
         </p>
-        <div class="bg-white shadow-xl leading-normal p-4 lg:p-6">
+        <div class="bg-white text-gray-800 shadow-xl leading-normal p-4 lg:p-6">
           <p>
             初めまして、Webエンジニアのなかむです。<br />
             <br />

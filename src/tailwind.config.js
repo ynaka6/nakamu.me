@@ -7,8 +7,12 @@
 module.exports = {
   theme: {
     extend: {
+      screens: {
+        'light-mode': { raw: '(prefers-color-scheme: light)' },
+        'dark-mode': { raw: '(prefers-color-scheme: dark)' }
+      },
       colors: {
-        primary: {
+        bland: {
           100: '#FFEFEF',
           200: '#FFD7D7',
           300: '#FFBFBF',
