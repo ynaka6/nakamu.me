@@ -3,7 +3,7 @@
     <div class="container mx-auto">
       <div class="w-full px-2">
         <n-title :title="title" class="text-center mb-1" />
-        <p class="text-center text-sm text-gray-700 mb-4">
+        <p class="text-center text-sm text-secondary mb-4">
           個人として提供しているサービスを紹介します。
         </p>
       </div>
@@ -86,7 +86,7 @@
               <n-round-button
                 :tag-name="'nuxt-link'"
                 to="/contact"
-                class="shadow-primary-500 bg-primary-500 text-sm text-white px-10 hover:bg-white hover:bg-primary-600 hover:shadow-xl"
+                class="shadow-primary-500 bg-bland-500 text-sm text-white px-10 hover:bg-white hover:bg-bland-600 hover:shadow-xl"
               >
                 <font-awesome-icon :icon="['fas', 'envelope']" class="mr-2" />
                 お問い合わせ

@@ -4,7 +4,7 @@
     :href="href"
     :target="target"
     :rel="rel"
-    class="inline-block border border-primary-500 rounded-full px-2 py-1 font-bold text-primary-500 text-xs"
+    class="inline-block bg-white shadow border border-bland-500 rounded-full px-2 py-1 font-bold text-bland-500 text-xs"
   >
     {{ text }}
   </component>
