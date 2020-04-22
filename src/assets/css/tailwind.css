@@ -10,6 +10,11 @@ body {
   color: var(--color-text-primary);
 }
 
+body.light {
+  --color-bg: theme('colors.gray.100');
+  --color-text-primary: theme('colors.gray.800');
+  --color-text-secondary: theme('colors.gray.600');
+}
 
 body.dark {
   --color-bg: theme('colors.gray.800');

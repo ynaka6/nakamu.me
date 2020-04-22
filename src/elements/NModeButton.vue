@@ -1,7 +1,7 @@
 <template>
-  <button @click.prevent="changeMode">
-    <font-awesome-icon v-if="`light` == state.mode" icon="sun" />
-    <font-awesome-icon v-if="`dark` == state.mode" icon="moon" />
+  <button class="px-2" @click.prevent="changeMode">
+    <font-awesome-icon v-if="`light` == state.mode" icon="sun" size="lg" />
+    <font-awesome-icon v-if="`dark` == state.mode" icon="moon" size="lg" />
   </button>
 </template>
 
