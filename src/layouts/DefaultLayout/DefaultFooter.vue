@@ -76,6 +76,13 @@ export default defineComponent({
     }
 
     onMounted(() => {
+      if (
+        !document.body.classList.contains('light') &&
+        !document.body.classList.contains('dark')
+      ) {
+        document.body.classList.add('light')
+      }
+
       window.addEventListener('scroll', handleScroll)
     })
     onUnmounted(() => {
