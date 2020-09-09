@@ -34,12 +34,6 @@
             class="shadow-bland-500 bg-gradient-red-to-orange text-white hover:opacity-75 hover:border-bland-500 hover:shadow-xl"
             text="About Me"
           />
-          <n-round-button
-            :tag-name="'nuxt-link'"
-            to="/projects"
-            class="shadow-bland-500 mx-5 bg-white text-bland-500 border border-bland-500 hover:opacity-75"
-            text="My Works"
-          />
         </div>
       </div>
     </div>
