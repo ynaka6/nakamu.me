@@ -63,13 +63,8 @@
             <div class="timeline-img" />
 
             <div class="timeline-content">
-              <img
-                src="~/assets/images/work_experiences/auhl.com.hk.png"
-                class="w-full mb-2"
-                alt="Asian Union Holdings Limited"
-              />
               <p class="font-bold text-gray-700 text-sm px-2">
-                Asian Union Holdings Limited
+                Asian System Management Limited
               </p>
               <div class="date bg-gradient-gray">
                 2014.7 ~
