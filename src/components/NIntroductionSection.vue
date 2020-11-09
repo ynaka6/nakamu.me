@@ -31,9 +31,24 @@
           <n-round-button
             :tag-name="'nuxt-link'"
             to="/about"
-            class="shadow-bland-500 bg-gradient-red-to-orange text-white hover:opacity-75 hover:border-bland-500 hover:shadow-xl"
+            class="shadow-bland-500 bg-gradient-red-to-orange text-white mr-2 hover:opacity-75 hover:border-bland-500 hover:shadow-xl"
             text="About Me"
           />
+          <n-round-button
+            :tag-name="`a`"
+            href="https://sucsuc.me/user/nakamu?t=2"
+            class="shadow-bland-500 bg-white text-red-500 hover:opacity-75 border border-bland-500 hover:shadow-xl"
+            target="_blank"
+            rel="nofollow"
+            text="メンター応募"
+          >
+            <sup>
+              <font-awesome-icon
+                :icon="['fas', 'external-link-alt']"
+                class="ml-1"
+              />
+            </sup>
+          </n-round-button>
         </div>
       </div>
     </div>
