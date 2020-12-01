@@ -64,7 +64,7 @@
 
             <div class="timeline-content">
               <p class="font-bold text-gray-700 text-sm px-2">
-                Asian System Management Limited
+                非公開
               </p>
               <div class="date bg-gradient-gray">
                 2014.7 ~
