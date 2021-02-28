@@ -36,7 +36,7 @@
           />
           <n-round-button
             :tag-name="`a`"
-            href="https://sucsuc.me/user/nakamu?t=2"
+            href="https://sucsuc.me/user/283420716282413572"
             class="shadow-bland-500 bg-white text-red-500 hover:opacity-75 border border-bland-500 hover:shadow-xl"
             target="_blank"
             rel="nofollow"
