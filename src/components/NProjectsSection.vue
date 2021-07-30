@@ -95,12 +95,12 @@
             </n-browser-window>
             <div class="text-center mt-4">
               <a
-                href="https://blog.nakamu.life/"
+                href="https://blog.nakamu.me/"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="text-xl text-primary underline"
               >
-                blog.nakamu.life
+                blog.nakamu.me
               </a>
               <p class="text-xs mt-4">
                 エンジニアとして培ったノウハウをまとめた雑記ブログ
@@ -126,12 +126,12 @@
             </n-browser-window>
             <div class="text-center mt-4">
               <a
-                href="https://enjoyhk.nakamu.life/"
+                href="https://enjoyhk.nakamu.me/"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="text-xl text-primary underline"
               >
-                enjoyhk.nakamu.life
+                enjoyhk.nakamu.me
               </a>
               <p class="text-xs mt-4">
                 香港生活を綴った雑記ブログ
