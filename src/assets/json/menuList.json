@@ -3,5 +3,5 @@
     { "to": "/projects", "text": "Works" },
     { "to": "/services", "text": "Services" },
     { "to": "/contact", "text": "Contact" },
-    { "href": "https://blog.nakamu.life", "text": "Blog", "target": "_blank" }
+    { "href": "https://blog.nakamu.me", "text": "Blog", "target": "_blank" }
 ]
